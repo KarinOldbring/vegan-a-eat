@@ -18,6 +18,8 @@ Vegan-a-eat is a recipe sharing website for people looking for a healthier lifes
 * **Bugs**
 
 * **Technology Used**
+    * Libraries used
+    
 
 * **Deployment** 
 
