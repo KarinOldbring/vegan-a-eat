@@ -1,3 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Font-styling */
+
 h1, 
 h2, 
 h3, 
@@ -9,4 +17,34 @@ h6 {
 
 p {
     font-family: 'Lato', sans-serif;
+}
+
+/* Nav-bar */
+
+.navbar {
+    width: 100%;
+}
+
+/* Hero-image */
+
+.container-fluid {
+    width: 100%;
+    display: flex;
+    vertical-align: top;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.hero-text {
+    width: 100%;
+    top: 50%;
+    color: #000;
+    text-align: center;
+    position: absolute;
+    object-position: 50%;
 }
