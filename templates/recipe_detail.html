@@ -1,6 +1,36 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% block content %}
 
+<div class="container">
+    <h1>{{ recipe.title }}</h1>
+    <div class="row">
+        <div class="col-6">
+            {% if "placeholder" in recipe.featured_image.url %}
+            <img class="card-img-top"
+                src="https://www.pexels.com/photo/assorted-vegetables-1656666/">
+            {% else %}
+            <img class="card-img-top" src="{{ recipe.featured_image.url }}">
+            {% endif %}
+        </div>
+        <div class="col-6">
+            <p>{{ recipe.author }} | {{ recipe.updated_on}}</p>
+            <p>{{ recipe.excerpt }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">{{ recipe.ingredients}}</div>   
+    </div>
+    <div class="row">
+        <div class="col">{{ recipe.instructions}}</div>   
+    </div>
+    <div class="row">
+        <div class="col">
+            <p class="card-text text-muted h6">{{ recipe.created_on}} <i
+                class="far fa-heart"></i>{{ recipe.number_of_likes }}</p>
+            <p>{{ recipe.comments }}</p>
+        </div>
+    </div>
+</div>
 
 
 {% endblock %}
