@@ -1,8 +1,13 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect, render, get_object_or_404
 from django.views import generic, View
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from .models import Recipe
 from . import forms
+from django.contrib.auth.decorators import login_required
+
+#@login_required
+#def add_recipe(request):
+#    return render(request, 'add_recipe')
 
 class RecipeList(generic.ListView):
     """
@@ -44,8 +49,13 @@ def login_page(request):
             )
             if user is not None:
                 login(request, user)
-                message = f'Hello {user.username}! You have been logged in'
+                return redirect('home')
             else:
                 message = 'Login failed, please try again'
     return render(request, 'login.html', context={'form': form,
      'message': message})
+
+def logout_user(request):
+    logout(request)
+    return redirect('login')
+

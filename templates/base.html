@@ -50,11 +50,20 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'login' %}">Sign In</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Add Recipe</a>
+          </li>
         </ul>
       </nav>
 
     <main>
         {% block content %}
+        
+        {% if user.is.authenticated %}
+          <p>You are logged in as {{ request.user }}. Click here to <a href="{% url 'logout'
+             %}">log out</a></p>
+        {% endif %}
+
         {% endblock %}
     </main>
 
