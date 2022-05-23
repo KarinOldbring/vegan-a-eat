@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
+from django.contrib.auth import login, authenticate
 from .models import Recipe
+from . import forms
 
 class RecipeList(generic.ListView):
     """
@@ -29,3 +31,21 @@ class RecipeDetail(View):
                 "liked": liked
             },
         )
+
+def login_page(request):
+    form = forms.LoginForm()
+    message = ''
+    if request.method == 'POST':
+        form = forms.LoginForm(request.POST)
+        if form.is_valid():
+            user = authenticate(
+                username=form.cleaned_data['username'],
+                password=form.cleaned_data['password'],
+            )
+            if user is not None:
+                login(request, user)
+                message = f'Hello {user.username}! You have been logged in'
+            else:
+                message = 'Login failed, please try again'
+    return render(request, 'login.html', context={'form': form,
+     'message': message})

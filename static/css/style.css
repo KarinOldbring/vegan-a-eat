@@ -31,6 +31,7 @@ p {
     width: 100%;
     display: flex;
     vertical-align: top;
+    overflow: hidden;
 }
 
 img {
@@ -47,4 +48,9 @@ img {
     text-align: center;
     position: absolute;
     object-position: 50%;
+}
+
+.sub-text {
+    text-align: center;
+    margin: 10px;
 }
