@@ -4,6 +4,7 @@ from django.contrib.auth import login, authenticate, logout
 from .models import Recipe
 from . import forms
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
 
 #@login_required
 #def add_recipe(request):
@@ -19,6 +20,9 @@ class RecipeList(generic.ListView):
     paginate_by = 6
 
 class RecipeDetail(View):
+    """
+    Shows recipe in detail
+    """
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
@@ -38,6 +42,9 @@ class RecipeDetail(View):
         )
 
 def login_page(request):
+    """
+    Login page
+    """
     form = forms.LoginForm()
     message = ''
     if request.method == 'POST':
@@ -56,6 +63,21 @@ def login_page(request):
      'message': message})
 
 def logout_user(request):
+    """
+    Logout function
+    """
     logout(request)
     return redirect('login')
 
+def signup_page(request):
+    """
+    Sign Up page
+    """
+    form = forms.SignupForm()
+    if request.method == 'POST':
+        form = forms.SignupForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect(settings.LOGIN_REDIRECT_URL)
+    return render(request, 'sign_up.html', context={'form': form})

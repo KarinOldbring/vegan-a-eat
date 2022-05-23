@@ -45,7 +45,7 @@
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
+            <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'login' %}">Sign In</a>
@@ -57,14 +57,15 @@
       </nav>
 
     <main>
-        {% block content %}
+        {% block content %}{% endblock %}
         
+        <!-- Logged in user -->
         {% if user.is.authenticated %}
           <p>You are logged in as {{ request.user }}. Click here to <a href="{% url 'logout'
              %}">log out</a></p>
         {% endif %}
 
-        {% endblock %}
+        
     </main>
 
     <footer>
