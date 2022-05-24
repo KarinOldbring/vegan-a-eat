@@ -1,4 +1,43 @@
 {% extends 'base.html' %}
+{% load cloudinary %}
 {% block content %}
+
+{% if user.is_authenticated %}
+<div class="container">
+    <h1>Share your recipe!</h1>
+    <div class="row">
+        <form action="." method="post">
+            {% csrf_token %}
+            <div class="row">
+                {{ recipe_form.title }}
+            </div>
+            <div class="row">
+                {{ recipe_form.excerpt }}
+            </div>
+            <div class="row">
+                {{ recipe_form.cooking_time }}
+            </div>
+            <div class="row">
+                {{ recipe_form.ingredients }}
+            </div>
+            <div class="row">
+                {{ recipe_form.instructions }}
+            </div>
+            <div class="row">
+                {{ recipe_form.featured_image }}
+                <p>If no image is uploaded a default image will be displayed</p>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+{% else %}
+<div class="container">
+    <p>Please <a href="{% url 'signup' %}"> Sign up or <a href="{% url 'login' %}"> Login to share a recipe!</a></p>
+</div>
+{% endif %}
+        
+
+
 
 {% endblock %}

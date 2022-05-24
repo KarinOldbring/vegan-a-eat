@@ -5,10 +5,11 @@ from .models import Recipe
 from . import forms
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
+from .forms import RecipeForm
 
-#@login_required
-#def add_recipe(request):
-#    return render(request, 'add_recipe')
+@login_required
+def add_recipe(request):
+    return render(request, 'add_recipe')
 
 class RecipeList(generic.ListView):
     """
@@ -81,3 +82,24 @@ def signup_page(request):
             login(request, user)
             return redirect(settings.LOGIN_REDIRECT_URL)
     return render(request, 'sign_up.html', context={'form': form})
+
+def add_recipe(request):
+    """
+    Add recipe page
+    """
+    recipe_form = RecipeForm(request.POST or None, request.FILES or None)
+    context = {
+        'recipe_form': recipe_form,
+    }
+
+    if request.method == "POST":
+        recipe_form = RecipeForm(request.POST or None, request.FILES or None)
+        if recipe_form.is_valid():
+            recipe_form = recipe_form.save(commit=False)
+            recipe_form.author = request.user
+            recipe_form.status = 1
+            recipe_form.save()
+            return redirect('home')
+    else:
+        recipe_form = RecipeForm()
+    return render(request, 'add_recipe.html', context)
