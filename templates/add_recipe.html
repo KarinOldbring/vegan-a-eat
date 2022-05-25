@@ -12,7 +12,6 @@
         <div class="col mt-3 mb-5">
             <form action="." method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                <!--{{recipe_form|crispy}}-->
                 <div class="row">
                     {{ recipe_form.title|as_crispy_field }}
                 </div>
