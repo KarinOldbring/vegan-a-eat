@@ -23,8 +23,8 @@ class Recipe(models.Model):
             MinValueValidator(1),
             MaxValueValidator(120)
         ])
-    ingredients = models.TextField()
-    instructions = models.TextField()
+    ingredients = SummernoteTextField()
+    instructions = SummernoteTextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)

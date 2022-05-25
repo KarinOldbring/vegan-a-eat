@@ -1,34 +1,40 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% load cloudinary %}
+
+
 {% block content %}
 
 {% if user.is_authenticated %}
 <div class="container">
     <h1>Share your recipe!</h1>
     <div class="row">
-        <form action="." method="post">
-            {% csrf_token %}
-            <div class="row">
-                {{ recipe_form.title }}
-            </div>
-            <div class="row">
-                {{ recipe_form.excerpt }}
-            </div>
-            <div class="row">
-                {{ recipe_form.cooking_time }}
-            </div>
-            <div class="row">
-                {{ recipe_form.ingredients }}
-            </div>
-            <div class="row">
-                {{ recipe_form.instructions }}
-            </div>
-            <div class="row">
-                {{ recipe_form.featured_image }}
-                <p>If no image is uploaded a default image will be displayed</p>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
+        <div class="col mt-3 mb-5">
+            <form action="." method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <!--{{recipe_form|crispy}}-->
+                <div class="row">
+                    {{ recipe_form.title|as_crispy_field }}
+                </div>
+                <div class="row">
+                    {{ recipe_form.excerpt|as_crispy_field }}
+                </div>
+                <div class="row">
+                    {{ recipe_form.cooking_time|as_crispy_field }}
+                </div>
+                <div class="row">
+                    {{ recipe_form.ingredients|as_crispy_field|safe }}
+                </div>
+                <div class="row">
+                    {{ recipe_form.instructions|as_crispy_field|safe }}
+                </div>
+                <div class="row">
+                    {{ recipe_form.featured_image }}
+                    <p>If no image is uploaded a default image will be displayed</p>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
 </div>
 {% else %}

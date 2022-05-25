@@ -1,8 +1,9 @@
 from django import forms
-from .models import Recipe, Comments
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
 from django_summernote.widgets import SummernoteInplaceWidget
+from .models import Recipe, Comments
+
 
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=63)
