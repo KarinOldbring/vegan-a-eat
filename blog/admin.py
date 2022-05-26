@@ -7,7 +7,7 @@ from .models import Recipe, Comments
 class RecipeAdmin(SummernoteModelAdmin):
 
     list_display = ('title', 'slug', 'status', 'created_on')
-    prepopulated_fields = {'slug': ('title',)}
+    prepopulated_fields = {'slug': ['title']}
     search_fields = ['title', 'author']
     list_filter = ('status', 'created_on')
     summernote_fields = ('ingredients', 'instructions')

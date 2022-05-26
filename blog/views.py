@@ -14,9 +14,10 @@ def add_recipe(request):
     Add recipe page
     """
     recipe_form = RecipeForm()
-
+    print(request.method)
     if request.method == "POST":
         recipe_form = RecipeForm()
+        print(recipe_form.is_valid())
         if recipe_form.is_valid():
             recipe_form = recipe_form.save(commit=False)
             recipe_form.author = request.user
@@ -76,7 +77,7 @@ def login_page(request):
                 return redirect('home')
             else:
                 message = 'Login failed, please try again'
-    return render(request, 'login.html', context={'form': form,
+    return render(request, 'account/login.html', context={'form': form,
      'message': message})
 
 def logout_user(request):

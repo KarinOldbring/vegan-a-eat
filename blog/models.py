@@ -22,7 +22,7 @@ class Recipe(models.Model):
             validators=[
             MinValueValidator(1),
             MaxValueValidator(120)
-        ])
+            ])
     ingredients = SummernoteTextField()
     instructions = SummernoteTextField()
     created_on = models.DateTimeField(auto_now_add=True)
