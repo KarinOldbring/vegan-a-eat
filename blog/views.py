@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Recipe
 from . import forms
 from .forms import RecipeForm
+from .forms import CommentForm
 
 
 @login_required
@@ -55,7 +56,8 @@ class RecipeDetail(View):
             {
                 "recipe": recipe,
                 "comments": comments,
-                "liked": liked
+                "liked": liked, 
+                "comment_form": CommentForm()
             },
         )
 
@@ -99,7 +101,7 @@ def signup_page(request):
             login(request, user)
             return redirect(settings.LOGIN_REDIRECT_URL)
 
-    return render(request, 'sign_up.html', context={'form': form})
+    return render(request, 'account/signup.html', context={'form': form})
 
 def about(request):
     """

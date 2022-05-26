@@ -19,17 +19,33 @@
         </div>
     </div>
     <div class="row">
-        <div class="col">{{ recipe.ingredients}}</div>   
+        <div class="col">{{ recipe.ingredients | safe }}</div>   
     </div>
     <div class="row">
-        <div class="col">{{ recipe.instructions}}</div>   
+        <div class="col">{{ recipe.instructions | safe }}</div>   
     </div>
     <div class="row">
         <div class="col">
             <p class="card-text text-muted h6">{{ recipe.created_on}} <i
                 class="far fa-heart"></i>{{ recipe.number_of_likes }}</p>
-            <p>{{ recipe.comments }}</p>
         </div>
+    </div>
+    
+    <div> 
+        <h4>Leave a comment:</h4>
+        {% if user.is_authenticated %}
+
+        <p>Posting as: {{ user.username }}</p>
+        <form method="post">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button type="submit">Submit</button>
+        </form>
+        {% else %}
+        <div class="container">
+            <p>Please <a href="{% url 'signup' %}"> Sign up or <a href="{% url 'login' %}"> Login to leave a comment!</a></p>
+        </div>
+        {% endif %}
     </div>
 </div>
 

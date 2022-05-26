@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
 from django_summernote.widgets import SummernoteInplaceWidget
-from .models import Recipe, Comments
+from .models import Recipe, Comment
 
 
 class LoginForm(forms.Form):
@@ -38,3 +38,9 @@ class RecipeForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(RecipeForm, self).__init__(*args, **kwargs)
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('body',)
