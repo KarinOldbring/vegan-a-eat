@@ -17,7 +17,7 @@ def add_recipe(request):
     recipe_form = RecipeForm()
     print(request.method)
     if request.method == "POST":
-        recipe_form = RecipeForm()
+        recipe_form = RecipeForm(request.POST)
         print(recipe_form.is_valid())
         if recipe_form.is_valid():
             recipe_form = recipe_form.save(commit=False)
