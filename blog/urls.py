@@ -9,4 +9,5 @@ urlpatterns = [
     path('signup/', views.signup_page, name='signup'),
     path('addrecipe/', views.add_recipe, name='addrecipe'),
     path('<slug:slug>/', views.RecipeDetail.as_view(), name='recipe_detail'),
+    path('about/', views.about, name='about'),
 ]

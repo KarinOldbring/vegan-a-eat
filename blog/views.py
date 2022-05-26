@@ -100,3 +100,9 @@ def signup_page(request):
             return redirect(settings.LOGIN_REDIRECT_URL)
 
     return render(request, 'sign_up.html', context={'form': form})
+
+def about(request):
+    """
+    renders about page
+    """
+    return render(request, 'about.html')
