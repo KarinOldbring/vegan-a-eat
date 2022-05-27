@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
 {% block content %}
+{% load crispy_forms_tags %}
 
 <div class="container">
     <h1>{{ recipe.title }}</h1>
@@ -30,6 +30,23 @@
                 class="far fa-heart"></i>{{ recipe.number_of_likes }}</p>
         </div>
     </div>
+    <div class="row">
+        <div>
+            <h3>Comments:</h3>
+            <div class="card-body">
+                {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                    <p class="font-weight-bold">
+                        {{ comment.name }}
+                        <span class=" text-muted font-weight-normal">
+                            {{ comment.created_on }}
+                        </span> wrote:
+                    </p>
+                    {{ comment.body | linebreaks }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
 
     <div> 
         <h4>Leave a comment:</h4>
