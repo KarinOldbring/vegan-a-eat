@@ -73,7 +73,8 @@ img {
     color: #000000;
 }
 
-.post-link:hover {
+.post-link:hover,
+.page-link:hover {
     color: #f4900c;
 }
 
