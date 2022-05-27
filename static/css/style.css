@@ -25,7 +25,7 @@ p {
     width: 100%;
 }
 
-/* Hero-image */
+/* Hero-image 
 
 .container-fluid {
     width: 100%;
@@ -33,7 +33,7 @@ p {
     vertical-align: top;
     overflow: hidden;
     padding: inherit;
-}
+} */
 
 img {
     display: block;
@@ -55,4 +55,37 @@ img {
 .sub-text {
     text-align: center;
     margin: 10px;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+}
+
+.post-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.post-link:hover {
+    color: #f4900c;
+}
+
+.page-link {
+    color: #000000;
+}
+.post-title {
+    margin-top: 20%;
+    margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: lightgray;
 }
