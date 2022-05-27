@@ -1,5 +1,6 @@
-from django.shortcuts import redirect, render, get_object_or_404
+from django.shortcuts import redirect, render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect    
 from django.contrib.auth import login, authenticate, logout
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
@@ -40,7 +41,7 @@ class RecipeList(generic.ListView):
 
 class RecipeDetail(View):
     """
-    Shows recipe in detail
+    Shows recipe in detail and comments
     """
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
@@ -137,3 +138,17 @@ def about(request):
     renders about page
     """
     return render(request, 'about.html')
+
+class RecipeLike(View):
+    """
+    Likes
+    """
+    def post(self, request, slug, *args, **kwargs):
+        recipe = get_object_or_404(Recipe, slug=slug)
+
+        if recipe.likes.filter(id=request.user.id).exists():
+            recipe.likes.remove(request.user)
+        else:
+            recipe.likes.add(request.user)
+        
+        return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))

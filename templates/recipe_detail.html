@@ -26,14 +26,44 @@
     </div>
     <div class="row">
         <div class="col">
-            <p class="card-text text-muted h6">{{ recipe.created_on}} <i
-                class="far fa-heart"></i>{{ recipe.number_of_likes }}</p>
+            <p class="card-text text-muted h6">{{ recipe.created_on}}</p> 
+            <p><i class="far fa-heart"></i> {{ recipe.number_of_likes }}</p>
         </div>
+    </div>
+    <div class="col-1">
+        <strong>
+            {% if user.is_authenticated %}
+            <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
+                {% csrf_token %}
+                {% if liked %}
+                <button type="submit" name="recipe_id" value="{{ recipe.slug }}"
+                    class="btn btn-md"><i class="fas fa-heart"></i>
+                    {{ recipe.amount_of_likes }} </button>
+                {% else %}
+                <button type="submit" name="recipe_id" value="{{ recipe.slug }}"
+                    class="btn btn-md"><i class="far fa-heart"></i>
+                    {{ recipe.amount_of_likes }}</button>
+
+                {% endif %}
+            </form>
+            {% else %}
+            <span class="text-secondary"><i class="far-fa-heart"></i></span>
+            {% endif %}
+            <span class="text-secondary">{{ recipe.number_of_likes }}</span>
+        </strong>
+    </div>
+    <div class="col-1">
+        {% with comments.count as total_comments %}
+        <strong class="text-secondary"><i class="far fa-comments"></i>
+            <!-- Our total_comments variable goes before the closing strong tag -->
+            {{ total_comments }}</strong>
+        {% endwith %}
     </div>
     <div class="row">
         <div>
             <h3>Comments:</h3>
             <div class="card-body">
+                
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
