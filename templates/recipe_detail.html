@@ -97,6 +97,19 @@
     <br/><br/>
     <a href="{% url 'home' %}">Back</a>
 </div>
+<div class="container testing">
+    <div class="col-md-5 col-sm-12 border-bottom">
+        <h5>Edit or delete your recipe</h5>
+        <p>
+            <strong>{{ recipe.author }}</strong> {{ recipe.created_on }}
+            {% if request.user == recipe.author %}
+            <a href="{% url 'recipe_edit' recipe.slug %}" style="color: #000000;"><i class="far fa-edit"></i></a>
+            <a href="{% url 'recipe_delete' recipe.slug %}" style="color: #000000;"><i class="fas fa-trash"></i></a>
+            {% endif %}
+        </p>
+        <p>{{ recipe.title }}</p>
+    </div>
+</div
 
 
 {% endblock %}

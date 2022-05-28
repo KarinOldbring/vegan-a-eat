@@ -1,9 +1,11 @@
 from django.shortcuts import redirect, render, get_object_or_404, reverse
 from django.views import generic, View
-from django.http import HttpResponseRedirect    
+from django.http import HttpResponseRedirect
 from django.contrib.auth import login, authenticate, logout
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
+from django.views.generic.edit import UpdateView, DeleteView
+from django.urls import reverse_lazy
 from .models import Recipe
 from . import forms
 from .forms import RecipeForm
@@ -57,7 +59,7 @@ class RecipeDetail(View):
             {
                 "recipe": recipe,
                 "comments": comments,
-                "liked": liked, 
+                "liked": liked,
                 "comment_form": CommentForm()
             },
         )
@@ -135,7 +137,7 @@ def signup_page(request):
 
 def about(request):
     """
-    renders about page
+    Renders about page
     """
     return render(request, 'about.html')
 
@@ -152,3 +154,23 @@ class RecipeLike(View):
             recipe.likes.add(request.user)
         
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
+class RecipeEditView(UpdateView):
+    """
+    Edit recipe
+    """
+    model = Recipe
+    form_class = RecipeForm
+    template_name_suffix = '_update_form'
+    template_name = 'recipe_update_form.html'
+    success_url = '/'
+
+        
+class RecipeDeleteView(DeleteView):
+    """
+    Delete Recipe
+    """
+    model = Recipe
+    template_name = 'recipe_delete.html'
+    success_url = reverse_lazy('home')
