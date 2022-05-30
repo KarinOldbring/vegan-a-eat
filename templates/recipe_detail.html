@@ -55,52 +55,64 @@
     <div class="col-1">
         {% with comments.count as total_comments %}
         <strong class="text-secondary"><i class="far fa-comments"></i>
-            <!-- Our total_comments variable goes before the closing strong tag -->
             {{ total_comments }}</strong>
         {% endwith %}
     </div>
     <div class="row">
-        <div>
-            <h3>Comments:</h3>
+        <h3>Comments:</h3>
             <div class="card-body">
-                
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    {{ comment.body | linebreaks }}
-                </div>
+                    <div class="comments" style="padding: 10px;">
+                        <p class="font-weight-bold">
+                            {{ comment.name }}
+                            <span class=" text-muted font-weight-normal">
+                                {{ comment.created_on }}
+                            </span> wrote:
+                        </p>
+                        {{ comment.body | linebreaks }}
+                    </div>
                 {% endfor %}
             </div>
-        </div>
-
+    </div>
     <div> 
-        <h4>Leave a comment:</h4>
         {% if user.is_authenticated %}
+            <h4>Leave a comment:</h4>
 
-        <p>Posting as: {{ user.username }}</p>
-        <form method="post">
-            {{ comment_form | crispy }}
-            {% csrf_token %}
-            <button type="submit">Submit</button>
-        </form>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit">Submit</button>
+                </form>
         {% else %}
         <div class="container">
-            <p>Please <a href="{% url 'signup' %}"> Sign up or <a href="{% url 'login' %}"> Login to leave a comment!</a></p>
+            <p>Please <a href="{% url 'signup' %}"> register</a> or <a href="{% url 'login' %}"> Login</a> to leave a comment!</p>
         </div>
         {% endif %}
-    </div>
+</div>
     <br/><br/>
     <a href="{% url 'home' %}">Back</a>
 </div>
-<div class="container testing">
+<div>
+    {% for comment in comments %}
+    <div class="row justify-content-center mt-3 mb-5 border-bottom testing">
+        <div class="col-md-5 col-sm-12">
+            {% if request.user == comment.name %}
+            <strong>{{ comment.name }}</strong> {{ comment.created_on }}
+            <p>
+                <h5>Delete your comment</h5>
+                <a href="{% url 'delete_comment' recipe.slug %}" style="color: #000000;"><i class="fas fa-trash"></i></a>
+            </p>
+            <p>{{ comment.body }}</p>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="container">
     <div class="col-md-5 col-sm-12 border-bottom">
         {% if request.user == recipe.author %}
-            <h5>Edit or delete your recipe</h5>
+            <h5>Edit or delete your recipe:</h5>
                 <p><strong>{{ recipe.author }}</strong> {{ recipe.created_on }} {{ recipe.title }}</p>
                     <a href="{% url 'recipe_edit' recipe.slug %}" style="color: #000000;"><i class="far fa-edit"></i></a>
                     <a href="{% url 'recipe_delete' recipe.slug %}" style="color: #000000;"><i class="fas fa-trash"></i></a>

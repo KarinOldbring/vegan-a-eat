@@ -174,3 +174,12 @@ class RecipeDeleteView(DeleteView):
     model = Recipe
     template_name = 'recipe_delete.html'
     success_url = reverse_lazy('home')
+
+
+class RecipeDeleteComment(DeleteView):
+    """
+    Delete comment
+    """
+    model = Recipe
+    template_name = 'delete_comment.html'
+    success_url = reverse_lazy('recipe_list')

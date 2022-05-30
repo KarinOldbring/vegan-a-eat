@@ -64,6 +64,7 @@ class Comment(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 
+
     class Meta:
         """
         Orders the comments in ascending order
@@ -72,3 +73,4 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+        
