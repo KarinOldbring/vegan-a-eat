@@ -80,6 +80,16 @@ img {
 }
 */
 
+.card-img-top {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+}
+
+.card {
+
+}
+
 .img-container {
     position: relative;
 }
@@ -114,6 +124,3 @@ img {
     color: lightgray;
 }
 
-.testing {
-    background-color: aquamarine;
-}
