@@ -21,7 +21,12 @@ p {
 /* Nav-bar */
 
 .navbar {
+    padding: 0;
+}
+
+.nav-bar {
     width: 100%;
+    margin-left: 0;
 }
 
 .callout-container {
@@ -140,5 +145,5 @@ img {
 }
 
 .log-out {
-    
+
 }
