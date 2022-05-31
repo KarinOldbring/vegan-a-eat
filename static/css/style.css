@@ -124,6 +124,17 @@ img {
     color: lightgray;
 }
 
-.manage_recipe {
-    
+.manage-recipe {
+
+}
+
+.add-recipe-button {
+    background-color: #1f451a; 
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }

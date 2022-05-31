@@ -13,13 +13,17 @@
             <form action="{% url 'addrecipe' %}" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="row">
+                    <div class="col-6">
                     {{ recipe_form.title|as_crispy_field }}
+                    </div>
+                    <div class="col-6">
+                        {{ recipe_form.cooking_time|as_crispy_field }}
+                    </div>
                 </div>
                 <div class="row">
+                    <div class="col-6">
                     {{ recipe_form.excerpt|as_crispy_field }}
-                </div>
-                <div class="row">
-                    {{ recipe_form.cooking_time|as_crispy_field }}
+                    </div>
                 </div>
                 <div class="row">
                     {{ recipe_form.ingredients|as_crispy_field|safe }}
@@ -31,7 +35,7 @@
                     {{ recipe_form.featured_image }}
                     <p>If no image is uploaded a default image will be displayed</p>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" class="add-recipe-button">Submit</button>
             </form>
         </div>
     </div>
