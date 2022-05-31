@@ -2,10 +2,10 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<div class="container">
-    <h1>{{ recipe.title }}</h1>
+<div class="container mt-4">
+
     <div class="row">
-        <div class="col-6">
+        <div class="col-4">
             {% if "placeholder" in recipe.featured_image.url %}
             <img class="card-img-top"
                 src="https://res.cloudinary.com/karinoldbring/image/upload/v1652960544/n8ons3jj8u4wjxxylr0w.jpg">
@@ -14,94 +14,103 @@
             {% endif %}
         </div>
         <div class="col-6">
-            <p>{{ recipe.author }} | {{ recipe.updated_on}}</p>
+            <h1>{{ recipe.title }}</h1>
             <p>{{ recipe.excerpt }}</p>
+            <p>{{ recipe.author }} | {{ recipe.updated_on}}</p>
         </div>
     </div>
     <div class="row">
-        <div class="col">{{ recipe.ingredients | safe }}</div>   
+        <h5>Ingredients:</h5>
+        <div class="col">{{ recipe.ingredients | safe }}</div>
     </div>
     <div class="row">
-        <div class="col">{{ recipe.instructions | safe }}</div>   
+        <h5>Instructions:</h5>
+        <div class="col">{{ recipe.instructions | safe }}</div>
     </div>
     <div class="row">
         <div class="col">
-            <p class="card-text text-muted h6">{{ recipe.created_on}}</p> 
-            <p><i class="far fa-heart"></i> {{ recipe.number_of_likes }}</p>
+            <p class="card-text text-muted h6">{{ recipe.created_on}}</p>
         </div>
-    </div>
-    <div class="col-1">
-        <strong>
-            {% if user.is_authenticated %}
-            <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
-                {% csrf_token %}
-                {% if liked %}
-                <button type="submit" name="recipe_id" value="{{ recipe.slug }}"
-                    class="btn btn-md"><i class="fas fa-heart"></i>
-                    {{ recipe.amount_of_likes }} </button>
-                {% else %}
-                <button type="submit" name="recipe_id" value="{{ recipe.slug }}"
-                    class="btn btn-md"><i class="far fa-heart"></i>
-                    {{ recipe.amount_of_likes }}</button>
-
-                {% endif %}
-            </form>
-            {% else %}
-            <span class="text-secondary"><i class="far-fa-heart"></i></span>
-            {% endif %}
-            <span class="text-secondary">{{ recipe.number_of_likes }}</span>
-        </strong>
-    </div>
-    <div class="col-1">
-        {% with comments.count as total_comments %}
-        <strong class="text-secondary"><i class="far fa-comments"></i>
-            {{ total_comments }}</strong>
-        {% endwith %}
     </div>
     <div class="row">
-        <h3>Comments:</h3>
+        <div class="col-1">
+            <strong>
+                {% if user.is_authenticated %}
+                <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
+                    {% csrf_token %}
+                    {% if liked %}
+                    <button type="submit" name="recipe_id" value="{{ recipe.slug }}" class="btn btn-md"><i
+                            class="fas fa-heart"></i>
+                        {{ recipe.amount_of_likes }} </button>
+                    {% else %}
+                    <button type="submit" name="recipe_id" value="{{ recipe.slug }}" class="btn btn-md"><i
+                            class="far fa-heart"></i>
+                        {{ recipe.amount_of_likes }}</button>
+
+                    {% endif %}
+                </form>
+                {% else %}
+                <span class="text-secondary"><i class="far-fa-heart"></i></span>
+                {% endif %}
+                <span class="text-secondary">{{ recipe.number_of_likes }}</span>
+            </strong>
+        </div>
+        <div class="col-1">
+            {% with comments.count as total_comments %}
+            <strong class="text-secondary"><i class="far fa-comments"></i>
+                {{ total_comments }}</strong>
+            {% endwith %}
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-6 comments">
+            <h4>Comments:</h4>
             <div class="card-body">
                 {% for comment in comments %}
-                    <div class="comments" style="padding: 10px;">
-                        <p class="font-weight-bold">
-                            {{ comment.name }}
-                            <span class=" text-muted font-weight-normal">
-                                {{ comment.created_on }}
-                            </span> wrote:
-                        </p>
-                        {{ comment.body | linebreaks }}
-                    </div>
+                <div style="padding: 10px;">
+                    <p><strong>{{ comment.name }}</strong>
+                         wrote:</p>
+                    {{ comment.body | linebreaks }}
+                    <span class=" text-muted">
+                        {{ comment.created_on }}
+                    </span>
+                </div>
                 {% endfor %}
             </div>
-    </div>
-    <div> 
-        {% if user.is_authenticated %}
-            <h4>Leave a comment:</h4>
-
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit">Submit</button>
-                </form>
-        {% else %}
-        <div class="container">
-            <p>Please <a href="{% url 'signup' %}"> register</a> or <a href="{% url 'login' %}"> Login</a> to leave a comment!</p>
         </div>
-        {% endif %}
-</div>
-    <br/><br/>
+        <div class="col-6" >
+            {% if user.is_authenticated %}
+            <h4>Leave a comment:</h4>
+    
+            <p>Posting as: {{ user.username }}</p>
+            <form method="post">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="submit">Submit</button>
+            </form>
+            {% else %}
+            <div class="container">
+                <p>Please <a href="{% url 'signup' %}"> register</a> or <a href="{% url 'login' %}"> Login</a> to leave a
+                    comment!</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    
+    <br /><br />
     <a href="{% url 'home' %}">Back</a>
 </div>
 <div>
     {% for comment in comments %}
-    <div class="row justify-content-center mt-3 mb-5 border-bottom testing">
+    <div class="row justify-content-center mt-3 mb-5">
         <div class="col-md-5 col-sm-12">
             {% if request.user == comment.name %}
             <strong>{{ comment.name }}</strong> {{ comment.created_on }}
             <p>
                 <h5>Delete your comment</h5>
-                <a href="{% url 'delete_comment' recipe.slug %}" style="color: #000000;"><i class="fas fa-trash"></i></a>
+                <a href="{% url 'delete_comment' recipe.slug %}" style="color: #000000;"><i
+                        class="fas fa-trash"></i></a>
             </p>
             <p>{{ comment.body }}</p>
             {% endif %}
@@ -109,13 +118,13 @@
     </div>
     {% endfor %}
 </div>
-<div class="container">
-    <div class="col-md-5 col-sm-12 border-bottom">
+<div class=" row container manage-recipe">
+    <div class="col">
         {% if request.user == recipe.author %}
-            <h5>Edit or delete your recipe:</h5>
-                <p><strong>{{ recipe.author }}</strong> {{ recipe.created_on }} {{ recipe.title }}</p>
-                    <a href="{% url 'recipe_edit' recipe.slug %}" style="color: #000000;"><i class="far fa-edit"></i></a>
-                    <a href="{% url 'recipe_delete' recipe.slug %}" style="color: #000000;"><i class="fas fa-trash"></i></a>
+        <h5>Edit or delete your recipe:</h5>
+        <p><strong>{{ recipe.author }}</strong> {{ recipe.created_on }} {{ recipe.title }}</p>
+        <a href="{% url 'recipe_edit' recipe.slug %}" style="color: #000000;"><i class="far fa-edit"></i></a>
+        <a href="{% url 'recipe_delete' recipe.slug %}" style="color: #000000;"><i class="fas fa-trash"></i></a>
         {% endif %}
     </div>
 </div>
