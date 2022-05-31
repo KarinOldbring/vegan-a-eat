@@ -12,7 +12,10 @@ urlpatterns = [
     path('addrecipe/', views.add_recipe, name='addrecipe'),
     path('<slug:slug>/', views.RecipeDetail.as_view(), name='recipe_detail'),
     path('like/<slug:slug>', views.RecipeLike.as_view(), name='recipe_like'),
-    path('recipe_edit/<slug:slug>', views.RecipeEditView.as_view(), name='recipe_edit'),
-    path('recipe_delete/<slug:slug>', views.RecipeDeleteView.as_view(), name='recipe_delete'),
-    path('delete_comment/<slug:slug>', views.RecipeDeleteComment.as_view(), name='delete_comment'),
+    path('recipe_edit/<slug:slug>', views.RecipeEditView.as_view(),
+     name='recipe_edit'),
+    path('recipe_delete/<slug:slug>', views.RecipeDeleteView.as_view(),
+     name='recipe_delete'),
+    path('delete_comment/<slug:slug>', views.RecipeDeleteComment.as_view(),
+     name='delete_comment'),
 ]

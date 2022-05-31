@@ -2,20 +2,23 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<main class="container">
-    <img class="hero-image img-fluid" src="https://res.cloudinary.com/karinoldbring/image/upload/v1653371514/bg-image-small_wswo05.jpg">
-    <div class="hero-text container">
-        <h1>Welcome to Vegan-a-eat!</h1>
-        <p>A recipe sharing site for anyone looking for a healthier lifestyle!</p>
+<main class="container-fluid callout-container">
+    <div class="row">
+        <div class="col-12">
+            <section class="callout jumbotron text-center" >
+                <h1>Welcome to Vegan-a-eat!</h1>
+                <p>A recipe sharing site for anyone looking for a healthier lifestyle</p>
+                
+            </section>
+        </div>
     </div>
 </main>
-<div class="row justify-content-md-center sub-text">
-    <h3 class="col-6">To share your own recipes, please <a href="{% url 'login' %}">
-        Login</a> or <a href="{% url 'signup' %}">Register</a> to create an account! You are always welcome to view the recipes for inspiration!</h3>
-</div>
+ 
 <div class="container-fluid">
     <div class="row">
-
+        <div class="col text-center mt-3">
+            <h5>To share your own recipes, please <a href="{% url 'login' %}">
+            Login</a> or <a href="{% url 'signup' %}">Register</a> to create an account!</h5></div>
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
