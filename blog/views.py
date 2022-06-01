@@ -6,7 +6,7 @@ from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .models import Recipe
+from .models import Recipe, Comment
 from . import forms
 from .forms import RecipeForm
 from .forms import CommentForm
@@ -75,9 +75,9 @@ class RecipeDetail(View):
         comment_form = CommentForm(data=request.POST)
 
         if comment_form.is_valid():
-            comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.recipe = recipe
+            comment.author = request.user
             comment.save()
 
         else:
@@ -180,6 +180,6 @@ class RecipeDeleteComment(DeleteView):
     """
     Delete comment
     """
-    model = Recipe
+    model = Comment
     template_name = 'delete_comment.html'
-    success_url = reverse_lazy('recipe_list')
+    success_url = reverse_lazy('home')

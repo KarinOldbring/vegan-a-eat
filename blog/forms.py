@@ -41,6 +41,9 @@ class RecipeForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
+    """
+    Forms for comments
+    """
     class Meta:
         model = Comment
         fields = ('body',)

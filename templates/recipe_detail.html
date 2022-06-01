@@ -107,14 +107,17 @@
     {% for comment in comments %}
     <div class="row justify-content-center mt-3 mb-5">
         <div class="col-md-5 col-sm-12">
-            {% if request.user == comment.name %}
-            <strong>{{ comment.name }}</strong> {{ comment.created_on }}
+            {% if request.user == comment.author %}
+            <strong>{{ comment.author }}</strong> {{ comment.created_on }}
             <p>
                 <h5>Delete your comment</h5>
-                <a href="{% url 'delete_comment' recipe.slug %}" style="color: #000000;"><i
-                        class="fas fa-trash"></i></a>
+                <form method="POST" action="{% url 'delete_comment' comment.pk %}"> {% csrf_token %}
+                    <p>Are you sure you want to delete: {{ comment.body }}?</p>
+                    <input type="submit" value="Confirm">
+                </form>
+                <!--<a href="{% url 'delete_comment' comment.pk %}" style="color: #000000;"><i
+                        class="fas fa-trash"></i></a>-->
             </p>
-            <p>{{ comment.body }}</p>
             {% endif %}
         </div>
     </div>
