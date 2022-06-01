@@ -117,10 +117,6 @@ p {
     color: lightgray;
 }*/
 
-.manage-recipe {
-
-}
-
 .add-recipe-button {
     background-color: #1f451a; 
     border: none;
@@ -132,8 +128,8 @@ p {
     font-size: 16px;
 }
 
-.log-out {
-
+.back-button {
+    color: #000000;
 }
 
 footer {
