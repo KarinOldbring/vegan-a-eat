@@ -32,7 +32,7 @@ p {
 
 .navbar {
     padding: 0;
-    background-color: #f5eab8;
+    background-color: #eaeaea;
 }
 
 .nav-bar {
@@ -99,6 +99,18 @@ img {
 }
 */
 
+.about-image {
+    height: 20vw;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 50%;
+}
+
+.about-health {
+    align-items: center;
+    padding: 2rem
+}
+
 .recipe-list {
     
 }
@@ -150,7 +162,7 @@ img {
 .add-recipe-button {
     background-color: #1f451a; 
     border: none;
-    color: white;
+    color: #ffffff;
     padding: 10px 30px;
     text-align: center;
     text-decoration: none;
@@ -166,8 +178,8 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #f5eab8;
-    color: #000000;
+    background-color: #e5e5e5;
+    color: #eaeaea;
     text-align: center;
 }
 
@@ -176,4 +188,8 @@ footer {
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
+}
+
+.fa-brands {
+    color: #000000;
 }
