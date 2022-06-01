@@ -36,9 +36,9 @@
   <title>Vegan-a-eat | Recipe sharing site</title>
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-sm navbar-light container-fluid bg-light">
-    <!-- Brand/logo -->    
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-sm navbar-light container-fluid">
+    <!-- Brand/logo -->
     <div class="container nav-bar">
       <a class="navbar-brand" href="{% url 'home' %}">
         <img src="https://res.cloudinary.com/karinoldbring/image/upload/v1653983631/round_logo_j2mind.png"
@@ -84,14 +84,24 @@
 
   </main>
 
-  <footer class="footer mt-auto py-3">
+  <footer class="mt-auto">
     <p class="m-0 text-center text-black">Made by Karin Oldbring</p>
-    <p class="m-0 text-center text-black">Follow us:
+    <p class="m-0 text-center text-black">Get in touch:
       <br>
-      <i class="fab fa-facebook-square ms-3"></i>
-      <i class="fab fa-twitter-square ms-3"></i>
-      <i class="fab fa-instagram-square ms-3"></i>
-      <i class="fab fa-youtube-square ms-3"></i></p>
+      <ul class="social">
+        <li>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                aria-label="Visit our Facebook page (opens in new tab)"><i class="fa-brands fa-facebook"></i></a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                aria-label="Visit our Instagram page (opens in new tab)"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+            <a href="https://twitter.com/" target="_blank" rel="noopener"
+                aria-label="Visit our Twitter page (opens in new tab)"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+    </ul>
   </footer>
 
 </body>
