@@ -40,10 +40,6 @@ p {
     margin-left: 0;
 }
 
-/*main {
-    flex-grow: 1;
-}*/
-
 .callout-container {
     height: 50vh;
     background: url(https://res.cloudinary.com/karinoldbring/image/upload/v1653371514/bg-image-small_wswo05.jpg) no-repeat center center fixed;
@@ -64,40 +60,6 @@ p {
     padding: 0.5rem;
     border-radius: 25px;
 }
-
-/* Hero-image 
-
-.container-fluid {
-    width: 100%;
-    display: flex;
-    vertical-align: top;
-    overflow: hidden;
-    padding: inherit;
-} 
-
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-
-.hero-text {
-    width: 100%;
-    top: 50%;
-    color: #000;
-    text-align: center;
-    position: absolute;
-    object-position: 50%;
-    max-width: none;
-}
-
-
-.sub-text {
-    text-align: center;
-    margin: 10px;
-}
-*/
 
 .about-image {
     height: 20vw;
@@ -150,10 +112,10 @@ img {
     margin-left: 5%;
 }
 
-.post-subtitle {
+/*.post-subtitle {
     margin-left: 5%;
     color: lightgray;
-}
+}*/
 
 .manage-recipe {
 
