@@ -6,9 +6,8 @@
     <div class="row">
         <div class="col-12">
             <section class="callout jumbotron text-center" >
-                <h1>Welcome to Vegan-a-eat!</h1>
-                <p>A recipe sharing site for anyone looking for a healthier lifestyle</p>
-                
+                <h1>Vegan-a-eat!</h1>
+                <p>A recipe sharing site for a healthier lifestyle</p>
             </section>
         </div>
     </div>
@@ -17,8 +16,13 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h4>To share your own recipes, please <a href="{% url 'login' %}">
-            Login</a> or <a href="{% url 'signup' %}">Register</a> to create an account!</h4>
+            {% if user.is_authenticated %}
+                <h4>Welcome {{ user.username }}!</h4>
+                <p>Join the world of Vegan-a-eat!<br>Share your own recipes, comment other recipes and don't forget to spread the 💚!</p>
+            {% else %}
+                <h4>To share your own recipes, please <a href="{% url 'login' %}">
+                Login</a> or <a href="{% url 'signup' %}">Register</a> to create an account!</h4>
+            {% endif %}
         </div>
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left recipe-list">

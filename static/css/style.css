@@ -4,17 +4,6 @@
     border: none;
 }
 
-/*body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-} */
-
-
-/* Font-styling */
-
 h1, 
 h2, 
 h3, 
@@ -32,7 +21,7 @@ p {
 
 .navbar {
     padding: 0;
-    background-color: #eaeaea;
+    background-color: #e0e7cd;
 }
 
 .nav-bar {
@@ -42,7 +31,7 @@ p {
 
 .callout-container {
     height: 50vh;
-    background: url(https://res.cloudinary.com/karinoldbring/image/upload/v1653371514/bg-image-small_wswo05.jpg) no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/karinoldbring/image/upload/v1654070675/pexels-vanessa-loring-5965653_v3kwgk.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -136,7 +125,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #e5e5e5;
+    background-color: #e0e7cd;
     color: #eaeaea;
     text-align: center;
 }
