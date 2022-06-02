@@ -45,7 +45,7 @@ p {
 }
 
 .jumbotron {
-    background: #d3d3d3;
+    background: #e0e7cd;
     padding: 0.5rem;
     border-radius: 25px;
 }
@@ -126,7 +126,6 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: #e0e7cd;
-    color: #eaeaea;
     text-align: center;
 }
 

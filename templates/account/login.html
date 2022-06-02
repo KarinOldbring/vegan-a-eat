@@ -13,8 +13,9 @@
     <div class="col-md-8 mt-3">
       <h3>{% trans "Login" %}</h3>
 
-        <p>{% blocktrans %}If you have not created an account yet, then please
-          <a href="{{ signup_url }}">register</a> first.{% endblocktrans %}</p>
+        <p>{% blocktrans %}Welcome Vegan-friend!<br>
+          If you have not created an account yet, please
+          <a href="{{ signup_url }}">Register</a> first.{% endblocktrans %}</p>
             <form class="login" method="POST" action="{% url 'account_login' %}">
               {% csrf_token %}
               {{ form.as_p }}
