@@ -148,7 +148,11 @@ Site moc-ups were designed using balsamiq wireframes. The focus was on defining 
 
 ### Design Features
 
-* Navigation Bar
+* Header
+The header consists of a Navigation Bar that is consistent over all pages of the site. The Nav-Bar holds a conventionally placed logo in the top left corner of the site, which when clicked will take you back to the home page. Following the logo are links for the other pages of the site, which are altered depending on whether the user is logged in or not. When viewed on smaller screens the Nav-bar links are represented by a "burger-button", which when clicked will take the user to the desired page. 
+
+* Home Page
+When first visiting the site you are met by an image of various vegetables to fit the them of the site, and a short explanation of the sites purpose. Just beneath the image there is a welcome text that either will encourage you to Log in/Register, or greet you by your username if you are already logged in. 
 
 
 **Future Features**
