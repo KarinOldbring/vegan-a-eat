@@ -47,7 +47,7 @@ My goal for this site is to create a user friendly site for people who want to e
 
 **User Stories**
 
-*Applies to site users with and/or without account*
+*Applies to site users with and/or without account:*
 * As a site user I can see a list of recipes so that I can choose which one to view. 
 * As a site user I can click on a recipe so that I can view it in full. 
 * As a site user I can register an account so that I can have access to the site. 
@@ -59,6 +59,15 @@ My goal for this site is to create a user friendly site for people who want to e
 * As I site user I can read about the site to understand the benefits of plantbased food and be encouraged to visit the site again. 
 * As a site user I can create, read, update and delete posts so that I can manage my content. 
 * As a site user I can log in/out so that I can interact with the site.
+
+*Applies to site Admin/SuperUser:*
+* As Admin I can like or unlike a recipe so that I can interact with the content. 
+* As Admin I can comment recipes so that I can be part of the conversation. 
+* As Admin I can view the comments for a recipe so that I can see read the conversation.
+* As Admin I can view number of likes for a specifik recipe so that I can see which recipes are more popular. 
+* As Admin I can tell site users about the benefits of plantbased food so that users will be encouraged to visit the site again. 
+* As Admin I can create, read, update and delete posts so that I can manage my content. 
+* As Admin I can delete posts if inappropiate so that the content of the site is relevant. 
 
 **Design Goals**
 
