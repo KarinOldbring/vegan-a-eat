@@ -134,16 +134,19 @@ Site moc-ups were designed using balsamiq wireframes. The focus was on defining 
 
 *Please note, whilst the main features of the wireframes are a close match to the live website some deviations occur. For example, in the original wireframes the "Add Recipe" link was not included in the nav-bar. These changes have been made to improve UX and allow easier navigation.*
 
+## **Information Architecture**
 
+* Database Models
+
+![Entity Relationship Diagram](/static/site_images/ERD.png)
+
+* Site Map
+
+![Site Map](/static/site_images/P4-sitemap.png)
 
 ## **Features**
 **Future Features**
 
-## **Information Architecture**
-
-* Database Choice
-
-* Database Modelling
 
 ## **Testing**
 
