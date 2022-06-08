@@ -92,10 +92,20 @@ font-family: 'Lato', sans-serif;
 
 * Color Scheme
 
+Since the site displays images of different vegan recipes it was important to me to keep the site clean and not take focus from the food. Hence I chose not to add lots of different colors on the site, and the colors that are present should blend in well with the theme. The nav-bar and footer have a very light green that goes well with the darker green of the logo. The orange color of the carrot in the logo is used when hovering recipes. 
+Besides these colors I chose to keep the background color white and the text black. 
+
+- Light green: #e0e7cd
+- Dark green: #1f451a
+- Orange: #f4900c
+- White: #ffffff
+- Black: #000000
+
+![Color Scheme](/static/site_images/color-scheme.png)
+
 * Logo Vegan-a-eat
 
-
-
+![Logo](/static/site_images/logo-small.png)
     
 **Wireframes**
     
