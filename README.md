@@ -15,7 +15,9 @@ Vegan-a-eat is a recipe sharing website for people looking for a healthier lifes
     * Wireframes
 
 * **Features**
-    * Future features
+    * Design Features
+    * Existing Features
+    * Future Features
 
 * **Testing**
 
@@ -157,7 +159,14 @@ When first visiting the site you are met by an image of various vegetables to fi
 * Footer
 The footer is intentionally simple in order to complement the clean simplicity of the rest of the site. The Footer contains copyright information and social media links. 
 
-### Features
+### Existing Features
+
+* **Header Logo** appears on every page for consistency and easy navigation, clicking the logo takes you back to the home page. 
+* **Header Nav-Bar** appears on every page for consistency and easy navigation, the Nav-Bar toggles on smaller screens for better user experience. 
+* **Home Page Image** is to greet the site user and instantly provide the purpose of the site. 
+* **Welcome Text** is to guide the site user directly. If they need to Login/Register an account there are links for that, and if the user already is logged in they will be greated by their username. 
+* **Recipe Cards** are presented on the home page. The cards are paginated by six, i.e if there are more than six recipes on the site they will be displayed on another site. Arrows will point the user in the right direction for good user experience. The cards also holds information of the recipe title, 
+
 
 
 **Future Features**
