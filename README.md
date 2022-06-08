@@ -41,6 +41,9 @@ My goal for this site is to create a user friendly site for people who want to e
 * Inspire more people to eat healthy food. 
 
 **User Goals**
+* Get inspiration to enjoy more vegan food by viewing recipes. 
+* Ability to share their own favorite recipes. 
+* Create user account to interact. 
 
 **User Stories**
 
