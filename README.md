@@ -31,7 +31,7 @@ Vegan-a-eat is a recipe sharing website for people looking for a healthier lifes
 
 **Planning Stage**
 
-When initializing this project I started off by deciding what features should be included to have a good idea of what kind of site I was making. The next step was to create wireframes to start thinking about the design of the site. After that I started working on the database models. I spent quite a lot of time planning and scetching out the project, before writing any code, something that I belive to have benefitted from. 
+When initializing this project I started off by deciding what features should be included to have a good idea of what kind of site I was making. The next step was to create wireframes to start thinking about the design of the site. After that I started working on the database models. I decided to start with the backend first, to get those part up and running and then focusing on the design. I spent quite a lot of time planning and scetching out the project, before writing any code, something that I belive to have benefitted from. 
 
 **Project Goals**
 
@@ -75,15 +75,25 @@ My goal for this site is to create a user friendly site for people who want to e
 
 **Design Goals**
 
-
+* A site that works on all devices. 
+* Clean and sophisticated design to enhance user experience. 
+* Easy to understand and use.
+* The style aims to give the user such a good experience that they will want to visit the site again. 
 
 **Design Choices**
 
 * Font
 
 As Font I chose Playfair Display for all my headings for its playful but yet stylish design. To keep the site neat I chose to use Lato for all other text on the site. 
+font-family: 'Playfair Display', serif;
+font-family: 'Lato', sans-serif;
 
-* Colours
+![Fonts](/static/site_images/googlefonts.png)
+
+* Color Scheme
+
+* Logo Vegan-a-eat
+
 
 
     
