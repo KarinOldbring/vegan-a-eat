@@ -146,6 +146,9 @@ Site moc-ups were designed using balsamiq wireframes. The focus was on defining 
 
 ## **Features**
 
+### Design Features
+
+* Navigation Bar
 
 
 **Future Features**
