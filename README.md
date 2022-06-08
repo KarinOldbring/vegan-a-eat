@@ -154,6 +154,11 @@ The header consists of a Navigation Bar that is consistent over all pages of the
 * Home Page
 When first visiting the site you are met by an image of various vegetables to fit the them of the site, and a short explanation of the sites purpose. Just beneath the image there is a welcome text that either will encourage you to Log in/Register, or greet you by your username if you are already logged in. 
 
+* Footer
+The footer is intentionally simple in order to complement the clean simplicity of the rest of the site. The Footer contains copyright information and social media links. 
+
+### Features
+
 
 **Future Features**
 
