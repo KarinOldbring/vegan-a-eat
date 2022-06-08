@@ -145,6 +145,9 @@ Site moc-ups were designed using balsamiq wireframes. The focus was on defining 
 ![Site Map](/static/site_images/P4-sitemap.png)
 
 ## **Features**
+
+
+
 **Future Features**
 
 
