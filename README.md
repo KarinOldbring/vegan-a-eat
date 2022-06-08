@@ -118,7 +118,23 @@ The images on the site are chosen to go well with what ever images users upload.
     
 **Wireframes**
 
-    
+Site moc-ups were designed using balsamiq wireframes. The focus was on defining the basic layout structure of the app and identifying how displays would change on different screen sizes such as mobile, tablet and larger screens.
+
+![Home](/static/site_images/P4-home.png)
+
+![About](/static/site_images/P4-about.png)
+
+![Add Recipe](/static/site_images/P4-upload-recipe.png)
+
+![View Recipe](/static/site_images/P4-view-recipe.png)
+
+![Register](/static/site_images/P4-register.png)
+
+![Login](/static/site_images/P4-sign-in.png)
+
+*Please note, whilst the main features of the wireframes are a close match to the live website some deviations occur. For example, in the original wireframes the "Add Recipe" link was not included in the nav-bar. These changes have been made to improve UX and allow easier navigation.*
+
+
 
 ## **Features**
 **Future Features**
