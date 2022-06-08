@@ -9,6 +9,9 @@ Vegan-a-eat is a recipe sharing website for people looking for a healthier lifes
     * Design Goals
     * Design Choices
         * Font
+        * Color Scheme
+        * Logo Vegan-a-eat
+        * Images
     * Wireframes
 
 * **Features**
@@ -108,8 +111,13 @@ Besides these colors I chose to keep the background color white and the text bla
 I used [canva.com](https://www.canva.com/) to create my logo. I wanted a clean logo that goes well with the content of the site. 
 
 ![Logo](/static/site_images/logo-small.png)
+
+* Images
+
+The images on the site are chosen to go well with what ever images users upload. To keep consistency I have chosen to display images wiht mostly green palettes. 
     
 **Wireframes**
+
     
 
 ## **Features**
