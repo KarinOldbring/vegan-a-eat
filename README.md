@@ -105,6 +105,8 @@ Besides these colors I chose to keep the background color white and the text bla
 
 * Logo Vegan-a-eat
 
+I used [canva.com](https://www.canva.com/) to create my logo. I wanted a clean logo that goes well with the content of the site. 
+
 ![Logo](/static/site_images/logo-small.png)
     
 **Wireframes**
