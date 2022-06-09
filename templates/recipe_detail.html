@@ -78,6 +78,11 @@
                         {{ comment.created_on }}
                     </span>
                 </div>
+                {% if request.user == comment.author %}
+                <form method="POST" action="{% url 'delete_comment' comment.pk %}"> {% csrf_token %}
+                    <input class="btn-sm btn-outline-danger" type="submit" value="Delete comment">
+                    </form>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
@@ -113,7 +118,7 @@
             <a href="{% url 'recipe_delete' recipe.slug %}"><button class="btn btn-danger"><i class="fa fa-trash"></i> | Delete</button></a></p>
             {% endif %}
         </div>
-        <div  class="col-6">
+        <!--<div  class="col-6">
             {% for comment in comments %}
             <div>
                 {% if request.user == comment.author %}
@@ -125,7 +130,7 @@
                 {% endif %}
             </div>
             {% endfor %}
-        </div>  
+        </div>  -->
     </div>
 </div>
 
