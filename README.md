@@ -1,4 +1,6 @@
 # **Vegan-a-eat**
+![Vegan-a-eat](/static/site_images/am-i-responsive.png)
+# **Vegan-a-eat**
 Vegan-a-eat is a recipe sharing website for people looking for a healthier lifestyle. Site users can view recipes and if they create an account they can also interact with the site, i.e share their own recipes, comment recipes and like their favorite recipes. 
 
 ## Contents
