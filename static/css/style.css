@@ -126,6 +126,14 @@ p {
     color: #000000;
 }
 
+.edit-delete {
+    margin-top: 1rem;
+}
+
+.edit-recipe {
+    margin-right: 1rem;
+}
+
 footer {
     left: 0;
     bottom: 0;

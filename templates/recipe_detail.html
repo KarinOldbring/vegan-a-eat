@@ -109,10 +109,8 @@
             {% if request.user == recipe.author %}
             <h5>Manage your recipe:</h5>
             <strong>{{ recipe.author }}</strong> - {{ recipe.title }}
-            <p><a href="{% url 'recipe_delete' recipe.slug %}"><button class="btn btn-danger"><i class="fa fa-trash"></i> | Delete</button></a>
-            <a href="{% url 'recipe_edit' recipe.slug %}"><button class="btn btn-success"><i class="fa fa-edit"></i> | Edit</button></i></a></p>
-            <!--<p><a href="{% url 'recipe_edit' recipe.slug %}" style="color: #000000;"><i class="far fa-edit"></i></a>
-            <a href="{% url 'recipe_delete' recipe.slug %}" style="color: #000000;"><i class="fas fa-trash"></i></a></p>-->
+            <p class="edit-delete" ><a href="{% url 'recipe_edit' recipe.slug %}"><button class="btn btn-success edit-recipe"><i class="fa fa-edit"></i> | Edit</button></i></a>
+            <a href="{% url 'recipe_delete' recipe.slug %}"><button class="btn btn-danger"><i class="fa fa-trash"></i> | Delete</button></a></p>
             {% endif %}
         </div>
         <div  class="col-6">
