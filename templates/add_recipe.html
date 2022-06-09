@@ -32,7 +32,7 @@
                     {{ recipe_form.instructions|as_crispy_field|safe }}
                 </div>
                 <div class="row">
-                    {{ recipe_form.featured_image }}
+                    {{ recipe_form.featured_image|as_crispy_field }}
                     <p>If no image is uploaded a default image will be displayed</p>
                 </div>
                 <button type="submit" class="add-recipe-button">Submit</button>
