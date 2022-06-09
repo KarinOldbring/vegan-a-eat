@@ -54,7 +54,7 @@
                     {% endif %}
                 </form>
                 {% else %}
-                <span class="text-secondary"><i class="far-fa-heart"></i></span>
+                <span class="text-secondary"><i class="fas fa-heart"></i></span>
                 {% endif %}
                 <span class="text-secondary">{{ recipe.number_of_likes }}</span>
             </strong>
@@ -63,7 +63,7 @@
     
     <div class="row">
         <div class="col-6 comments">
-            <h4>Comments:</h4>
+            <h5>Comments:</h5>
             {% with comments.count as total_comments %}
             <strong class="text-secondary"><i class="far fa-comments"></i>
                 {{ total_comments }}</strong>
@@ -93,7 +93,7 @@
             </form>
             {% else %}
             <div class="container">
-                <p>Please <a href="{% url 'signup' %}"> Register</a> or <a href="{% url 'login' %}"> Login</a> to leave a
+                <p>Please <a href="{% url 'account_signup' %}"> Register</a> or <a href="{% url 'account_login' %}"> Login</a> to leave a
                     comment!</p>
             </div>
             {% endif %}
