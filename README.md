@@ -1,7 +1,7 @@
 # **Vegan-a-eat**
 Vegan-a-eat is a recipe sharing website for people looking for a healthier lifestyle. Site users can view recipes and if they create an account they can also interact with the site, i.e share their own recipes, comment recipes and like their favorite recipes. 
 
-## Table of Contents
+## Contents
 * **Introduction**
     * Planning Stage
     * Project Goals
@@ -101,7 +101,7 @@ Since the site displays images of different vegan recipes it was important to me
 Besides these colors I chose to keep the background color white and the text black. 
 
 - Light green: #e0e7cd
-- Dark green: #1f451a
+- Dark green: #387d2f
 - Orange: #f4900c
 - White: #ffffff
 - Black: #000000
@@ -112,7 +112,7 @@ Besides these colors I chose to keep the background color white and the text bla
 
 I used [canva.com](https://www.canva.com/) to create my logo. I wanted a clean logo that goes well with the content of the site. 
 
-![Logo](/static/site_images/logo-small.png)
+![Logo](/static/site_images/logo-new.png)
 
 * Images
 
@@ -135,6 +135,8 @@ Site moc-ups were designed using balsamiq wireframes. The focus was on defining 
 ![Login](/static/site_images/P4-sign-in.png)
 
 *Please note, whilst the main features of the wireframes are a close match to the live website some deviations occur. For example, in the original wireframes the "Add Recipe" link was not included in the nav-bar. These changes have been made to improve UX and allow easier navigation.*
+
+[Back to content](#contents)
 
 ## **Information Architecture**
 
@@ -165,7 +167,7 @@ The footer is intentionally simple in order to complement the clean simplicity o
 * **Header Nav-Bar** appears on every page for consistency and easy navigation, the Nav-Bar toggles on smaller screens for better user experience. The Nav-Bar presents different links if the user is logged in or not.  
 * **Home Page Image** is to greet the site user and instantly provide the purpose of the site. 
 * **Home Page Welcome Text** is to give immediate guidance to the site user. If the user is logged in they will be greated by their username, if not there are links to Login/Register an account. 
-* **Recipe Cards** are presented on the home page. The cards are paginated by six, i.e if there are more than six recipes on the site they will be displayed on another site. Arrows will point the user in the right direction for good user experience. The cards also hold information of the recipe title, author, created on, number of likes and an image. If the user has not chosen a specifik image a placeholder image will be displayed. 
+* **Recipe Cards** are presented on the home page. The cards are paginated by six, i.e if there are more than six recipes on the site they will be displayed on another site. Arrows will point the user in the right direction for good user experience. The cards hold information of the recipe title, author, created on, number of likes and an image. If the user has not chosen a specifik image a placeholder image will be displayed. 
 * **Recipe Form** can be used by logged in users. Here users who holds an account can add their own recipes, and also edit their own recipes. 
 * **Comment Form** is displayed underneath each recipe when viewed in full. Logged in users can comment recipes, and also delete their own comments. 
 * **Comment Section** is where all users, logged in or not can read all comments, who wrote them and when. 
@@ -177,16 +179,42 @@ The footer is intentionally simple in order to complement the clean simplicity o
 * **Register Page** is where new users can create a new account so that they can interact with the site. By creating a username, providing optional email and a required password an account is easily created. 
 * **Logout** is a page for the user to confirm their wish to log out of their account. If the user clicks the sign out button, they are then redirected to the home page.
 
-
 **Future Features**
 
+* **My Recipes**
+
+This feature would be a page where each user could see their own recipes in one place. A handy way to keep track of your own recipes and if you want to make adjustments. 
+
+* **Search Recipes**
+
+A search function so that users can search for example title or author, to find a specific recipe. 
+
+* **Profile Page**
+
+A profile page where each user could upload more information about themselves, for example profile picture to give a more community feel to the site. 
+
+* **Categorize**
+
+This feature is pretty simple and could in retrospect have been incorporated from the start. This feature would give you the option to choose a suitable category for your recipe when uploading it. 
+
+[Back to content](#contents)
 
 ## **Testing**
 
+[Back to content](#contents)
+
 ## **Bugs**
+
+[Back to content](#contents)
 
 ## **Technology Used**
 
+[Back to content](#contents)
+
 ## **Deployment**
 
+[Back to content](#contents)
+
 ## **Credits**
+
+[Back to content](#contents)
