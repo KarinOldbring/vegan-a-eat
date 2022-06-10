@@ -30,9 +30,10 @@ def add_recipe(request):
             recipe_form.status = 1
             recipe_form.save()
             return redirect('home')
-    
+
     return render(request, 'add_recipe.html', context={'recipe_form':
                   recipe_form})
+
 
 class RecipeList(generic.ListView):
     """
@@ -42,6 +43,7 @@ class RecipeList(generic.ListView):
     queryset = Recipe.objects.filter(status=1).order_by('created_on')
     template_name = 'index.html'
     paginate_by = 6
+
 
 class RecipeDetail(View):
     """
@@ -54,7 +56,7 @@ class RecipeDetail(View):
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
+
         return render(
             request,
             "recipe_detail.html",
@@ -65,7 +67,7 @@ class RecipeDetail(View):
                 "comment_form": CommentForm()
             },
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
@@ -84,7 +86,7 @@ class RecipeDetail(View):
 
         else:
             comment_form = CommentForm()
-            
+
         return render(
             request, "recipe_detail.html",
             {
@@ -94,6 +96,7 @@ class RecipeDetail(View):
                 "comment_form": CommentForm()
             },
         )
+
 
 def login_page(request):
     """
@@ -114,7 +117,8 @@ def login_page(request):
             else:
                 message = 'Login failed, please try again'
     return render(request, 'account/login.html', context={'form': form,
-     'message': message})
+                  'message': message})
+
 
 def logout_user(request):
     """
@@ -122,6 +126,7 @@ def logout_user(request):
     """
     logout(request)
     return redirect('login')
+
 
 def signup_page(request):
     """
@@ -137,11 +142,13 @@ def signup_page(request):
 
     return render(request, 'account/signup.html', context={'form': form})
 
+
 def about(request):
     """
     Renders about page
     """
     return render(request, 'about.html')
+
 
 class RecipeLike(View):
     """
@@ -154,7 +161,7 @@ class RecipeLike(View):
             recipe.likes.remove(request.user)
         else:
             recipe.likes.add(request.user)
-        
+
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
@@ -168,7 +175,7 @@ class RecipeEditView(UpdateView):
     template_name = 'recipe_update_form.html'
     success_url = '/'
 
-        
+
 class RecipeDeleteView(DeleteView):
     """
     Delete Recipe
