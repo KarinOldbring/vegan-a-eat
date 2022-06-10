@@ -70,7 +70,16 @@
 * Expected Outcome: When clicking the logo, the user should be redirected to home page. 
 * Test: I tried clicking the logo from all different pages on the site, both as logged in user and not. 
 * Result: Every time I clicked the logo I was redirected to home page. 
-* Verdict: 
+* Verdict: Code functioned as intented and did not break at any stage.
+
+#### Home Link
+
+* Expected Outcome: When clicking on Home link, the user should be redirected to home page. 
+* Test: I tried clicking the Home link from all different pages on the site, both as logged in user and not. 
+* Result:Every time I clicked the Home link I was redirected to home page. 
+* Verdict: Code functioned as intented and did not break at any stage.
+
+#### 
 
 * Expected Outcome: 
 * Test: 
