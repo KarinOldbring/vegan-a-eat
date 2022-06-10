@@ -22,8 +22,8 @@
                 <p>Join the world of Vegan-a-eat!<br>Share your own recipes, comment other recipes and don't forget to spread the 💚!</p>
             {% else %}
                 <h3>Welcome to Vegan-a-Eat!</h3>
-                <h5>To share your own recipes, please <a href="{% url 'account_login' %}">
-                Login</a> or <a href="{% url 'account_signup' %}">Register</a> to create an account!</h5>
+                <h4>To share your own recipes, please <a href="{% url 'account_login' %}">
+                Login</a> or <a href="{% url 'account_signup' %}">Register</a> to create an account!</h4>
             {% endif %}
         </div>
         <!-- Recipe entries column -->
@@ -36,9 +36,10 @@
                             <div class="image-container">
                                 {% if "placeholder" in recipe.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/karinoldbring/image/upload/v1652960544/n8ons3jj8u4wjxxylr0w.jpg">
+                                    src="https://res.cloudinary.com/karinoldbring/image/upload/v1652960544/n8ons3jj8u4wjxxylr0w.jpg"
+                                    alt="Vegan food">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ recipe.featured_image.url }}"alt="Vegan food">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p>Author: {{ recipe.author }}</p>

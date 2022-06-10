@@ -25,6 +25,7 @@ def add_recipe(request):
         print(recipe_form.is_valid())
         if recipe_form.is_valid():
             recipe_form = recipe_form.save(commit=False)
+            recipe_form.title = recipe_form.title.title()
             recipe_form.author = request.user
             recipe_form.status = 1
             recipe_form.save()
