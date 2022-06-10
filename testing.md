@@ -121,18 +121,34 @@
 * Result: When logged in the Logout link is visible, when clicked the user is redirected to Logout page. 
 * Verdict: Code functions as intented.
 
+### Footer
+
+#### Footer
+
+* Expected Outcome: The footer should be visible on all pages of the site and always be placed on the bottom of the page. 
+* Test: Visit every page of the site to check if footer is visible. 
+* Result: The footer is visible on every page of the site. 
+* Verdict: Code functions as intented.
+
+#### Footer Links
+
+* Expected Outcome: The icons for social media in the footer are supposed to be opened up in new tabs when clicked. 
+* Test: Click the social media icons in footer. 
+* Result: When clicking the icons the social media is opened up in a new tab. 
+* Verdict: Code functions as intented.
+
 ### Welcome Text
 
 #### Welcome Text - not logged in
 
-* Expected Outcome: If user is not logged in, a welcome text with clickable links to Login/Register account should be displayed. 
+* Expected Outcome: If user is not logged in, a welcome text with clickable links to Login/Register account should be displayed on the home page. 
 * Test: Enter the site when not logged in. 
 * Result: When entering the site as a user not logged in, a welcome text with fully functional clickable links is displayed. 
 * Verdict: Code functions as intented.
 
 #### Welcome Text -logged in
 
-* Expected Outcome: If user is logged in, a welcome text displaying the users username should be displayed. 
+* Expected Outcome: If user is logged in, a welcome text displaying the users username should be displayed on the home page. 
 * Test: Enter the site when logged in. 
 * Result: When entering the site as a logged in user, a welcome text displaying the correct username is displayed. 
 * Verdict: Code functions as intented.
