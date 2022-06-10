@@ -279,6 +279,8 @@ Testing was done manually throughout the development process. The full rundown o
      - GitHub was used to store the project after pushing
 - [Am I Responsive?](http://ami.responsivedesign.is/# "Link to Am I Responsive Homepage")
      - Am I Responsive was used to see responsive design throughout the process and to generate mockup imagery to be used.
+- [Balsamiq Wireframes](https://balsamiq.com/learn/articles/what-are-wireframes/ "Link to Balsamiq Wireframes")
+     - Balsamiq Wireframes was used to create the wireframes for the project.  
 
 
 [Back to content](#contents)
