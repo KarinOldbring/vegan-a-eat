@@ -79,6 +79,12 @@
 * Result:Every time I clicked the Home link I was redirected to home page. 
 * Verdict: Code functioned as intented and did not break at any stage.
 
+#### About
+
+* Expected Outcome: When clicking on About link, the user should be redirected to About page.
+* Test: I tried clicking the About link from all different pages on the site, both as logged in user and not.
+* Result: Every time I clicked the About link I was redirected to About page.
+* Verdict: Code functioned as intented and did not break at any stage.
 #### 
 
 * Expected Outcome: 
