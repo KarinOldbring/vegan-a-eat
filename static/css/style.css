@@ -29,6 +29,11 @@ p {
     margin-left: 0;
 }
 
+.alert-dismissible {
+    padding-right: 3rem;
+    background: #f4900c;
+}
+
 .callout-container {
     height: 50vh;
     background: url(https://res.cloudinary.com/karinoldbring/image/upload/v1654070675/pexels-vanessa-loring-5965653_v3kwgk.jpg) no-repeat center center fixed;
