@@ -7,7 +7,7 @@
 [View GitHub repository](https://github.com/KarinOldbring/vegan-a-eat)
 
 ***
-## Table of contents
+## Contents
 * Testing User Stories
 * Manual Testing
 * Automated Testing 
@@ -46,3 +46,45 @@
     * All logged in site users can add new recipes, view in full, and update and delete their own recipes. If the site user is the author of a recipe viewed in full, there will be options to edit and delete that specific recipe.
 11. As a site user I can log in/out so that I can interact with the site.
     * All users with an account can log in and out of the page. The navigation bar at the top will show either Login or Logout depending on whether the user is logged in or not. On the Home page the user will also be greeted by name if logged in. Ta make it even more user friendly an alert will pop ut when the user either logs in or out. 
+
+
+    *Applies to site Admin/SuperUser:*
+
+1. As Admin I can tell site users about the benefits of plantbased food so that users will be encouraged to visit the site again.
+    * By using the About Page Admin can tell the site users about the benefits of plant-based food. 
+2. As Admin I can create, read, update and delete posts so that I can manage my content.
+    * As Admin it is important to also take part in inspiring the site users by presenting appealing recipes. 
+3. As Admin I can delete recipes if inappropiate so that the content of the site is relevant.
+    * Through the Admin site the Super User can delete recipe entries if they do not match the purpose of the site. 
+4. As Admin I can delete comments if inappropiate so that the conversations on the site maintain a high level. 
+    * It is crucial for the Super User to be able to make sure that the site does not host any hostile or offensive comments. 
+
+[Back to content](#contents)
+
+## Manual Testing
+
+### Navigation Bar
+
+#### Logo
+
+* Expected Outcome: When clicking the logo, the user should be redirected to home page. 
+* Test: I tried clicking the logo from all different pages on the site, both as logged in user and not. 
+* Result: Every time I clicked the logo I was redirected to home page. 
+* Verdict: 
+
+* Expected Outcome: 
+* Test: 
+* Result:
+* Verdict: 
+
+[Back to content](#contents)
+
+## Automated Testing
+* Code Validation
+* Browser Validation
+
+[Back to content](#contents)
+
+## User Testing
+
+[Back to content](#contents)
