@@ -16,21 +16,21 @@ class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE,
-        related_name='recipes')
+                               related_name='recipes')
     updated_on = models.DateTimeField(auto_now=True)
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     cooking_time = models.IntegerField(default=1,
-            validators=[
-            MinValueValidator(1),
-            MaxValueValidator(120)
-            ])
+                                       validators=[
+                                                   MinValueValidator(1),
+                                                   MaxValueValidator(120)
+                                                   ])
     ingredients = SummernoteTextField()
     instructions = SummernoteTextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='recipe_likes',
-             blank=True)
+                                   blank=True)
 
     class Meta:
         """
@@ -60,9 +60,9 @@ class Comment(models.Model):
     Model for comment
     """
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE,
-                             related_name="comments")
+                               related_name="comments")
     author = models.ForeignKey(User, on_delete=models.CASCADE,
-                            related_name='author_comments')
+                               related_name='author_comments')
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 
