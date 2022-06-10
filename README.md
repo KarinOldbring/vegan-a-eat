@@ -72,13 +72,10 @@ My goal for this site is to create a user friendly site for people who want to e
 * As a site user I can log in/out so that I can interact with the site.
 
 *Applies to site Admin/SuperUser:*
-* As Admin I can like or unlike a recipe so that I can interact with the content. 
-* As Admin I can comment recipes so that I can be part of the conversation. 
-* As Admin I can view the comments for a recipe so that I can see read the conversation.
-* As Admin I can view number of likes for a specifik recipe so that I can see which recipes are more popular. 
-* As Admin I can tell site users about the benefits of plantbased food so that users will be encouraged to visit the site again. 
-* As Admin I can create, read, update and delete posts so that I can manage my content. 
-* As Admin I can delete posts if inappropiate so that the content of the site is relevant. 
+ * As Admin I can tell site users about the benefits of plantbased food so that users will be encouraged to visit the site again.
+* As Admin I can create, read, update and delete posts so that I can manage my content.
+* As Admin I can delete recipes if inappropiate so that the content of the site is relevant.
+* As Admin I can delete comments if inappropiate so that the conversations on the site maintain a high level. 
 
 **Design Goals**
 
