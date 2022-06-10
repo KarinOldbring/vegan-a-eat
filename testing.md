@@ -153,6 +153,22 @@
 * Result: When entering the site as a logged in user, a welcome text displaying the correct username is displayed. 
 * Verdict: Code functions as intented.
 
+### Recipe List
+
+#### Recipe Overview
+
+* Expected Outcome: When entering the site a list of recipes are supposed to be displayed. The list should present a preview of each recipe with some basic information. 
+* Test: 
+* Result: 
+* Verdict: Code functions as intented.
+
+#### Page Pagination
+
+* Expected Outcome: 
+* Test: 
+* Result: 
+* Verdict: Code functions as intented.
+
 #### 
 
 * Expected Outcome: 
