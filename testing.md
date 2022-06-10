@@ -65,12 +65,19 @@
 
 ### Navigation Bar
 
+#### Navigation Bar 
+
+* Expected Outcome: The navigation bar should be visible on every page of the site. If page is rendered on smaller screens the navigation bar should toggle for better user experience. 
+* Test: Visit every page of the site to check if navigation bar is visible. View the navigation bar on different size screens to check responsiveness of navigation bar and toggle function. 
+* Result: The navigation bar is visible on every page of the site. When viewed on smaller screens the links are toggled for better user experience. 
+* Verdict: Code functions as intented.
+
 #### Logo
 
 * Expected Outcome: When clicking the logo, the user should be redirected to home page. 
 * Test: I tried clicking the logo from all different pages on the site, both as logged in user and not. 
 * Result: Every time I clicked the logo I was redirected to home page. 
-* Verdict: Code functioned as intented and did not break at any stage.
+* Verdict: Code functions as intented.
 
 #### Home Link
 
