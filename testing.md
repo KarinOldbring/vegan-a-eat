@@ -77,14 +77,43 @@
 * Expected Outcome: When clicking on Home link, the user should be redirected to home page. 
 * Test: I tried clicking the Home link from all different pages on the site, both as logged in user and not. 
 * Result:Every time I clicked the Home link I was redirected to home page. 
-* Verdict: Code functioned as intented and did not break at any stage.
+* Verdict: Code functions as intented.
 
-#### About
+#### About Link
 
 * Expected Outcome: When clicking on About link, the user should be redirected to About page.
 * Test: I tried clicking the About link from all different pages on the site, both as logged in user and not.
 * Result: Every time I clicked the About link I was redirected to About page.
-* Verdict: Code functioned as intented and did not break at any stage.
+* Verdict: Code functions as intented.
+
+#### Add Recipe Link
+
+* Expected Outcome: When clicking on Add Recipe, the user should either be redirected to Add Recipe page if logged in or Login page if not. 
+* Test: I tried clicking the Add Recipe link both as logged in user and as user not logged in. 
+* Result: When clicking the Add Recipe link as logged in the user is redirected to Add Recipe. If the user is not logged in the user is redirected to the Login page. 
+* Verdict: Code functions as intented.
+
+#### Register Link
+
+* Expected Outcome: If the site user is not logged in, the Register Link will be displayed in the Navigation Bar. When clicked, the user should be redirected to Register account page. 
+* Test: Enter the site as a user not logged in, then click Register link. 
+* Result: When not logged in the Register link is visible, when clicked the user is redirected to Register account page. 
+* Verdict: Code functions as intented.
+
+#### Login Link
+
+* Expected Outcome: If the site user is not logged in, the Login Link will be displayed in the Navigation Bar. When clicked, the user should be redirected to Login page. 
+* Test: Enter the site as a user not logged in, then click Login link.
+* Result: When not logged in the Login link is visible, when clicked the user is redirected to Login page.
+* Verdict: Code functions as intented.
+
+#### Logout Link
+
+* Expected Outcome: If the site user is logged in, the Logout Link will be displayed in the Navigation Bar. When clicked, the user should be redirected to a Logout page to confirm they wish to log out. 
+* Test: When logged in, click the Logout Link. 
+* Result: When logged in the Logout link is visible, when clicked the user is redirected to Logout page. 
+* Verdict: Code functions as intented.
+
 #### 
 
 * Expected Outcome: 
