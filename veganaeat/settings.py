@@ -65,6 +65,11 @@ ACCOUNT_USERNAME_REQUIRED = True
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+SUMMERNOTE_CONFIG = {
+    'width': '100%',
+    'height': '480',
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
