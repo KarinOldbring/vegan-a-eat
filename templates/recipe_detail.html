@@ -8,9 +8,10 @@
         <div class="col-4">
             {% if "placeholder" in recipe.featured_image.url %}
             <img class="card-img-top"
-                src="https://res.cloudinary.com/karinoldbring/image/upload/v1652960544/n8ons3jj8u4wjxxylr0w.jpg">
+                src="https://res.cloudinary.com/karinoldbring/image/upload/v1652960544/n8ons3jj8u4wjxxylr0w.jpg"
+                alt="Vegan food">
             {% else %}
-            <img class="card-img-top" src="{{ recipe.featured_image.url }}">
+            <img class="card-img-top" src="{{ recipe.featured_image.url }}"alt="Vegan food">
             {% endif %}
         </div>
         <div class="col-6">
