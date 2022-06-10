@@ -114,11 +114,27 @@
 * Result: When logged in the Logout link is visible, when clicked the user is redirected to Logout page. 
 * Verdict: Code functions as intented.
 
+### Welcome Text
+
+#### Welcome Text - not logged in
+
+* Expected Outcome: If user is not logged in, a welcome text with clickable links to Login/Register account should be displayed. 
+* Test: Enter the site when not logged in. 
+* Result: When entering the site as a user not logged in, a welcome text with fully functional clickable links is displayed. 
+* Verdict: Code functions as intented.
+
+#### Welcome Text -logged in
+
+* Expected Outcome: If user is logged in, a welcome text displaying the users username should be displayed. 
+* Test: Enter the site when logged in. 
+* Result: When entering the site as a logged in user, a welcome text displaying the correct username is displayed. 
+* Verdict: Code functions as intented.
+
 #### 
 
 * Expected Outcome: 
 * Test: 
-* Result:
+* Result: 
 * Verdict: 
 
 [Back to content](#contents)
