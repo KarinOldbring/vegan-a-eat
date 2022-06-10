@@ -203,6 +203,7 @@ This feature is pretty simple and could in retrospect have been incorporated fro
 
 ## **Testing**
 
+Testing was done manually throughout the development process. The full rundown of the testing can be found in a separate [TESTING.md](TESTING.md) file.
 [Back to content](#contents)
 
 ## **Bugs**

@@ -11,9 +11,10 @@
         <div class="col-4">
             {% if "placeholder" in recipe.featured_image.url %}
             <img class="card-img-top"
-                src="https://res.cloudinary.com/karinoldbring/image/upload/v1652960544/n8ons3jj8u4wjxxylr0w.jpg"alt="Vegan food">
+                src="https://res.cloudinary.com/karinoldbring/image/upload/v1652960544/n8ons3jj8u4wjxxylr0w.jpg"
+                alt="Vegan food">
             {% else %}
-            <img class="card-img-top" src="{{ recipe.featured_image.url }}"alt="Vegan food">
+            <img class="card-img-top" src="{{ recipe.featured_image.url }}" alt="Vegan food">
             {% endif %}
         </div>
         <div class="col-6">
@@ -73,7 +74,7 @@
                 {% for comment in comments %}
                 <div style="padding: 10px;">
                     <p><strong>{{ comment.author }}</strong>
-                         wrote:</p>
+                        wrote:</p>
                     {{ comment.body | linebreaks }}
                     <span class=" text-muted">
                         {{ comment.created_on }}
@@ -82,15 +83,15 @@
                 {% if request.user == comment.author %}
                 <form method="POST" action="{% url 'delete_comment' comment.pk %}"> {% csrf_token %}
                     <input class="btn-sm btn-outline-danger" type="submit" value="Delete comment">
-                    </form>
+                </form>
                 {% endif %}
                 {% endfor %}
             </div>
         </div>
-        <div class="col-6" >
+        <div class="col-6">
             {% if user.is_authenticated %}
             <h4>Leave a comment:</h4>
-    
+
             <p>Posting as: {{ user.username }}</p>
             <form method="post">
                 {{ comment_form | crispy }}
@@ -99,30 +100,33 @@
             </form>
             {% else %}
             <div class="container">
-                <p>Please <a href="{% url 'account_signup' %}"> Register</a> or <a href="{% url 'account_login' %}"> Login</a> to leave a
+                <p>Please <a href="{% url 'account_signup' %}"> Register</a> or <a href="{% url 'account_login' %}">
+                        Login</a> to leave a
                     comment!</p>
             </div>
             {% endif %}
         </div>
-    </div>    
+    </div>
 </div>
 
 <!-- Manage recipe -->
 <div class="container mt-4">
-    <div class="row" >
+    <div class="row">
         <div class="col-6">
             {% if request.user == recipe.author %}
             <h5>Manage your recipe:</h5>
             <strong>{{ recipe.author }}</strong> - {{ recipe.title }}
-            <p class="edit-delete" ><a href="{% url 'recipe_edit' recipe.slug %}"><button class="btn btn-success edit-recipe"><i class="fa fa-edit"></i> | Edit</button></i></a>
-            <a href="{% url 'recipe_delete' recipe.slug %}"><button class="btn btn-danger"><i class="fa fa-trash"></i> | Delete</button></a></p>
+            <p class="edit-delete"><a href="{% url 'recipe_edit' recipe.slug %}"><button
+                        class="btn btn-success edit-recipe"><i class="fa fa-edit"></i> | Edit</button></i></a>
+                <a href="{% url 'recipe_delete' recipe.slug %}"><button class="btn btn-danger"><i
+                            class="fa fa-trash"></i> | Delete</button></a></p>
             {% endif %}
         </div>
     </div>
 </div>
-<div class="container text-center" >
+<div class="container text-center">
     <br /><br />
-    <a href="{% url 'home' %}" class="back-button btn-default" >Back</a>
+    <a href="{% url 'home' %}" class="back-button btn-default">Back</a>
 </div>
 
 {% endblock %}
