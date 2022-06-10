@@ -32,7 +32,7 @@ def add_recipe(request):
             return redirect('home')
     
     return render(request, 'add_recipe.html', context={'recipe_form':
-     recipe_form})
+                  recipe_form})
 
 class RecipeList(generic.ListView):
     """

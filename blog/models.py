@@ -7,6 +7,7 @@ from django.template.defaultfilters import slugify
 
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
+
 class Recipe(models.Model):
     """
     Model for recipe
@@ -28,8 +29,8 @@ class Recipe(models.Model):
     instructions = SummernoteTextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)
-
+    likes = models.ManyToManyField(User, related_name='recipe_likes',
+             blank=True)
 
     class Meta:
         """
@@ -42,13 +43,13 @@ class Recipe(models.Model):
         Returns a string representation of an object
         """
         return self.title
-    
+
     def number_of_likes(self):
         """
         Returns the number of likes on a post
         """
         return self.likes.count()
-    
+
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         return super().save(*args, **kwargs)
@@ -66,12 +67,11 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
 
-    class Meta:
-        """
-        Orders the comments in ascending order
-        """
-        ordering = ['created_on']
+class Meta:
+    """
+    Orders the comments in ascending order
+    """
+    ordering = ['created_on']
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
-        
