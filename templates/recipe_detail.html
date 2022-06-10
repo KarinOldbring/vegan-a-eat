@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
-{% block content %}
 {% load crispy_forms_tags %}
+{% load cloudinary %}
+
+{% block content %}
 
 <div class="container mt-4">
 
+    <!-- Recipe details -->
     <div class="row">
         <div class="col-4">
             {% if "placeholder" in recipe.featured_image.url %}
@@ -19,23 +22,21 @@
             <p>{{ recipe.author }} | {{ recipe.updated_on}}</p>
         </div>
     </div>
-
     <div class="row">
         <h5>Ingredients:</h5>
         <div class="col">{{ recipe.ingredients | safe }}</div>
     </div>
-
     <div class="row">
         <h5>Instructions:</h5>
         <div class="col">{{ recipe.instructions | safe }}</div>
     </div>
-
     <div class="row">
         <div class="col">
             <p class="card-text text-muted h6">{{ recipe.created_on}}</p>
         </div>
     </div>
     <hr class="block-divider">
+    <!-- Likes -->
     <div class="row">
         <div class="col-1">
             <strong>
@@ -60,7 +61,7 @@
             </strong>
         </div>
     </div>
-    
+    <!-- Comments -->
     <div class="row">
         <div class="col-6 comments">
             <h5>Comments:</h5>
@@ -103,11 +104,10 @@
             </div>
             {% endif %}
         </div>
-    </div>
-    
+    </div>    
 </div>
 
-
+<!-- Manage recipe -->
 <div class="container mt-4">
     <div class="row" >
         <div class="col-6">
@@ -118,22 +118,8 @@
             <a href="{% url 'recipe_delete' recipe.slug %}"><button class="btn btn-danger"><i class="fa fa-trash"></i> | Delete</button></a></p>
             {% endif %}
         </div>
-        <!--<div  class="col-6">
-            {% for comment in comments %}
-            <div>
-                {% if request.user == comment.author %}
-                <h5>Delete your comment:</h5>
-                    <form method="POST" action="{% url 'delete_comment' comment.pk %}"> {% csrf_token %}
-                    <p>Are you sure you want to delete:<br>{{ comment.body }}?</p>
-                    <input class="btn btn-outline-secondary" type="submit" value="Confirm">
-                    </form>
-                {% endif %}
-            </div>
-            {% endfor %}
-        </div>  -->
     </div>
 </div>
-
 <div class="container text-center" >
     <br /><br />
     <a href="{% url 'home' %}" class="back-button btn-default" >Back</a>

@@ -34,8 +34,9 @@
   <title>Vegan-a-eat | Recipe sharing site</title>
 </head>
 
-<!-- Nav-bar -->
 <body class="d-flex flex-column min-vh-100">
+
+  <!-- Nav-bar -->
   <nav class="navbar navbar-expand-sm navbar-light container-fluid">
     <!-- Brand/logo -->
     <div class="container nav-bar">
@@ -44,7 +45,7 @@
           alt="vegan-a-eat-logo" style="width:120px; height: 120px;">
       </a>
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#n_bar"
-       aria-controls="#n_bar" aria-label="Toggle navigation">
+        aria-controls="#n_bar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- Links -->
@@ -75,6 +76,8 @@
       </div>
     </div>
   </nav>
+
+  <!-- Login/out alert -->
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
@@ -89,6 +92,7 @@
   </div>
 
   <main>
+    
     {% block content %}
 
     {% endblock %}
@@ -115,7 +119,6 @@
         </li>
       </ul>
   </footer>
-
 </body>
 
 </html>
