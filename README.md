@@ -208,6 +208,47 @@ Testing was done manually throughout the development process. The full rundown o
 
 ## **Bugs**
 
+* **Bug** - *Models not rendering correctly*
+    The models I had created was not displaying correctly, not showing input boxes and displaying in an unordered way. 
+    
+    **Solution:** It turned out I had forgot to add the "|as_crispy_forms" in the template tags. After adding that all my models displayed correctly. 
+
+* **Bug** - *Instruction and Ingredients showing html code*
+    Similar mistake as the previous one, when viewing a recipe you could see html code displaying in the boxes for ingredients and instructions. 
+    
+    **Solution:** This time it was the "|safe" that was missing in the template tags. Adding that fixed the problem. 
+
+* **Bug** - *Error thrown when creating new account*
+    When a new user account was created there was a ConnectionRefusedError thrown, the account was created though. When reloading the page and trying to log in with the very same login credentials it worked. 
+
+    **Solution** After reaching out on Slack a fellow student guided me towards the account settings in the settings.py file. After adding the following the account registration worked as intented: 
+
+    ACCOUNT_EMAIL_VERIFICATION = 'none'
+    ACCOUNT_EMAIL_REQUIRED = False
+    ACCOUNT_AUTHENTICATION_METHOD = 'username'
+    ACCOUNT_USERNAME_REQUIRED = True
+
+* **Bug** - *No placeholder image uploading*
+    If the user chooses not to upload an image, a placeholder image should be displayed, but if left blank no image at all was displayed. 
+
+    **Solution** After adding an if statement: {% if "placeholder" in recipe.featured_image.url %} the placeholder image was displayed as expected. 
+
+* **Bug** - *Summernote not responsive*
+    On smaller screens it turned out that my form fields that have Summernote only were responsive down to a certain point. On smaller screens there was an overlay and you had to scroll sideways to see the full field. 
+
+    **Solution** Once again I reached out on Slack to see if any of my fellow students had any good solutions and once again I got help. It turned out that all I had to do was add SUMMERNOTE_CONFIG in my settings.py file, and from there I could add the desired width and height. 
+
+* **Known Bug** - *Error thrown due to slug issue*
+    The recipe titles need to be unique since the slug is generated from it. But, if you write for example Tomato Soup, it will be viewed as different from tomato soup - but the slug will still be the same and hence an error will be thrown. To solve this I would have to create a more sophisticated way to render unique slugs, something that I at this point feel I do not have enough time to do. I will have to leave this as a known bug for now, and come back to it in the future. 
+
+* **Known Bug** - *Directed to homepage after editing recipe*
+    This known issue is related to the previous bug, after a user has edited their recipe they are redirected to the home page. Ultimately I would like the user to be directed back to the updated recipe, but unfortunately I have not found a way to do that without the unique slug. Also this I will have to leave for now due to limited time, but will come back to in the future. 
+
+
+
+
+
+
 [Back to content](#contents)
 
 ## **Technology Used**
