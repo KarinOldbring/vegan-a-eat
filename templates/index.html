@@ -3,27 +3,28 @@
 
 {% block content %}
 <!-- Welcome image -->
-<main class="container-fluid callout-container">
+<div class="container-fluid callout-container">
     <div class="row">
         <div class="col-12">
-            <section class="callout jumbotron text-center" >
+            <section class="callout jumbotron text-center">
                 <h1>Vegan-a-eat!</h1>
                 <p>A recipe sharing site for a healthier lifestyle</p>
             </section>
         </div>
     </div>
-</main>
- <!-- Welcome text -->
+</div>
+<!-- Welcome text -->
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
             {% if user.is_authenticated %}
-                <h2>Welcome {{ user.username }}!</h2>
-                <p>Join the world of Vegan-a-eat!<br>Share your own recipes, comment other recipes and don't forget to spread the 💚!</p>
+            <h2>Welcome {{ user.username }}!</h2>
+            <p>Join the world of Vegan-a-eat!<br>Share your own recipes, comment other recipes and don't forget to
+                spread the 💚!</p>
             {% else %}
-                <h2>Welcome to Vegan-a-Eat!</h2>
-                <h3>To share your own recipes, please <a href="{% url 'account_login' %}">
-                Login</a> or <a href="{% url 'account_signup' %}">Register</a> to create an account!</h3>
+            <h2>Welcome to Vegan-a-Eat!</h2>
+            <h3>To share your own recipes, please <a href="{% url 'account_login' %}">
+                    Login</a> or <a href="{% url 'account_signup' %}">Register</a> to create an account!</h3>
             {% endif %}
         </div>
         <!-- Recipe entries column -->
@@ -39,7 +40,7 @@
                                     src="https://res.cloudinary.com/karinoldbring/image/upload/v1652960544/n8ons3jj8u4wjxxylr0w.jpg"
                                     alt="Vegan food">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ recipe.featured_image.url }}"alt="Vegan food">
+                                <img class="card-img-top" src=" {{ recipe.featured_image.url }}" alt="Vegan food">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p>Author: {{ recipe.author }}</p>
