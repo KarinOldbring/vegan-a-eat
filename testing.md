@@ -286,8 +286,18 @@
 [Back to content](#contents)
 
 ## Automated Testing
-* Code Validation
-* Browser Validation
+
+### Code Validation
+
+### Browser Validation
+
+The site has been tested using the following browsers:
+
+* Chrome
+* Firefox
+* Edge
+* Safari
+
 
 [Back to content](#contents)
 
