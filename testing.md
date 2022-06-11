@@ -182,19 +182,48 @@
 * Result 2: When a recipe is clicked it opens up and reveals all available information, including cooking time. 
 * Verdict: Code now functions as intented.
 
+#### Likes
+
+* Expected Outcome: When viewing a recipe in full number of likes is supposed to be displayed and if the user is logged in the ability to like/unlike should be available. 
+* Test: Open a recipe to see if likes are visible and check that the heart icon is clickable and generates a like. 
+* Result: Number of likes are displayed and if the user is logged in the heart is clickable and generates another like. 
+* Verdict: Code functions as intented.
+
+#### View Comments
+
+* Expected Outcome: When viewing a recipe in full all comments are supposed to be displayed showing the oldest one first. 
+* Test: Open a recipe to see if comments are available to all users and that they are displayed oldest first. 
+* Result: Comments are displayed to all users, logged in or not. The oldest comment is presented first. 
+* Verdict: Code functions as intented.
+
+#### Delete Comment
+
+* Expected Outcome: A logged in user is supposed to be able to delete their own comments in an easy and intuitive way. 
+* Test: Log in to see if my comments can be deleted by me only. 
+* Result: When logged all comments are displayed and the ones created by me are presented with a "Delete Comment" button underneath. When this is clicked the comment disappears. The site user is then redirected home. 
+* Verdict: The code function to delete comment works as intented, although a future version of this site would keep the site user on that specific recipe instead of being redirected to home page. This is connected to the issue with unique slugs mentioned in the Bugs section in Readme.md. 
+
+#### Create Comments
+
+* Expected Outcome: When viewing a recipe in full a logged in user is supposed to be presented with the option to leave a comment. If the user is not logged in a Login/Register option should be available stating that it's necessary to be logged in to be able to leave a comment. 
+* Test: Log in as logged in user to leave a comment, visit page when not logged in to see options. 
+* Result: When viewing a recipe in full as logged in user the option to leave a comment in presented. When a comment is entered and the user presses the "Submit" button the comment is displayed in the comments section. If the user is not logged in there is a text stating that you need to be logged in to comment, the text presents clickable links to Login/Register. 
+* Verdict: Code functions as intented.
+
+#### Edit Recipe
+
+* Expected Outcome: 
+* Test: 
+* Result: 
+* Verdict: 
+
 #### 
 
 * Expected Outcome: 
 * Test: 
 * Result: 
-* Verdict:
+* Verdict: 
 
-#### 
-
-* Expected Outcome: 
-* Test: 
-* Result: 
-* Verdict:
 [Back to content](#contents)
 
 ## Automated Testing
