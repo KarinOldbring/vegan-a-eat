@@ -240,12 +240,12 @@
 
 ### Add Recipe
 
-#### 
+#### Recipe Title
 
-* Expected Outcome: 
-* Test: 
-* Result: 
-* Verdict: 
+* Expected Outcome: The title of the recipe needs to be unique since the recipe slug is created from it. If a user enters a title that is already in use they should be encouraged to choose a unique title. 
+* Test: Create two recipes with identical titles. 
+* Result: If the titles are identical the user is encouraged to change the title since a recipe with this title already exists. But if the same title is written once in capital letters and once in lowercase letters, the form will not identify the titles as identical and hence pass that test but the slug function will throw an error since that will be the same. 
+* Verdict: This is mentioned in the Bugs section in the Readme.md file. I tried getting around this issue by trying different versions of capitalization etc but unfortunately that was not enugh. I did leave the function to capitalize the first letter of each title word though for design purposes. Hence the unique title function has a flaw, but over all it functions and a the issue will be fixed in a future version of the site. 
 
 ####
 
