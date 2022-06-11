@@ -219,17 +219,17 @@
 
 #### Edit Recipe
 
-* Expected Outcome: When wieving your own recipes you are supposed to be presented with the option to Edit your recipe. When this button is clicked an Edit Recipe view is opened and all features of the recipe can be edited. 
+* Expected Outcome: When wieving your own recipes you are supposed to be presented with the option to Edit your recipe. When the Edit button is clicked an Edit Recipe view is opened and all features of the recipe can be edited. 
 * Test: View my own recipe, click Edit button and edit the recipe. 
 * Result: The Edit Recipe view opens when the button is clicked and all features of the recipe can be edited. After the recipe has been edited and the Submit button is clicked, the recipe is updated and the user is redirected to the home page. 
 * Verdict: The code function to Edit recipe works as intented, although also here there is an issue with the unique slug as presented in the Bugs section in the Readme.md. In a future version of the site the user would have been taken back to the recipe detail instead of being redirected to the home page for better user experience. 
 
 #### Delete Recipe
 
-* Expected Outcome: 
-* Test: 
-* Result: 
-* Verdict: 
+* Expected Outcome: When viewing your own recipes you are supposed to be preseted with the option to Delete your recioe. When the Delete button is clicked the user is supposed to be redirected to the Delete Recipe page to confirm this action. If the user not wished to Delete there should be a Back to Feed button. 
+* Test: View my own recipe, click Delete button and Delete recipe. 
+* Result: The Delete Recipe page opens when the button is clicked and the user is presented with an option to go back to feed or if sure confirm that they wish to delete their recipe. After the button is clicked the user is redirected to the home page. 
+* Verdict: Code functions as intented.
 
 #### 
 
