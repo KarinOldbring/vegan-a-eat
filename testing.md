@@ -231,12 +231,27 @@
 * Result: The Delete Recipe page opens when the button is clicked and the user is presented with an option to go back to feed or if sure confirm that they wish to delete their recipe. After the button is clicked the user is redirected to the home page. 
 * Verdict: Code functions as intented.
 
+### About Page
+
+* Expected Outcome: When visiting the About page the user should be presented with some information regarding the site and it's functionality. 
+* Test: Visit About page to view content. 
+* Result: When visiting the About page the content of the site is displayed in a neat and explanatory way. For better user experience when viewed on smaller screens the images on the page are hidden since they serve a design purpose only. 
+* Verdict: Code functions as intented.
+
 #### 
 
 * Expected Outcome: 
 * Test: 
 * Result: 
 * Verdict: 
+
+####
+
+* Expected Outcome: 
+* Test: 
+* Result: 
+* Verdict: 
+
 
 [Back to content](#contents)
 
