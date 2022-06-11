@@ -158,15 +158,15 @@
 #### Recipe Overview
 
 * Expected Outcome: When entering the site a list of recipes are supposed to be displayed. The list should present a preview of each recipe with some basic information. 
-* Test: 
-* Result: 
+* Test: Enter the site to check if recipes are displayed. 
+* Result: When entering the site a list of recipes are presented. Each recipe cards presents a preview of an image, author, title, excerpt (if available), created date and number of likes. 
 * Verdict: Code functions as intented.
 
 #### Page Pagination
 
-* Expected Outcome: 
-* Test: 
-* Result: 
+* Expected Outcome: To make the site more user friendly there should be a maximum of 6 recipes displayed at once. When there are 6 recipes on the page it should paginate and the user should be able to click to get to the next page. 
+* Test: Check if page pagination is activated if there are more than 6 recipes on the site by adding a larger number of recipes. 
+* Result: The seventh recipe that was added to the site was displayed on a second page, visible if the next button was clicked. 
 * Verdict: Code functions as intented.
 
 #### 
