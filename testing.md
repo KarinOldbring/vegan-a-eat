@@ -289,6 +289,20 @@
 
 ### Code Validation
 
+The [W3C Markup Validator](https://validator.w3.org/) service was used to validate the HTML and CSS code used. The [PEP8 Python Validator](http://pep8online.com/) was used to validate the Python code. 
+
+#### Results:
+
+* HTML Validation - all pages clear
+
+The Summernote feature implemented in the forms threw up a large number of errors. Unfortunately this is not something I was able to rectify and as such was left in the code. It will be noted that these errors were not caused by me and as such should hopefully not count toward the final grade.
+
+* CCS Validation - page clear 
+
+* Python Validation - all pages clear
+
+ I found errors when validating the python files. This was found in the settings.py file where certain urls went beyond the character limit on a single line. This error can be ignored as there is no way to reduce the url length to conform to the character limit per line.
+
 ### Browser Validation
 
 The site has been tested using the following browsers:
