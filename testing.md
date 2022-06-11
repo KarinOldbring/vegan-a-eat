@@ -249,17 +249,38 @@
 
 #### Add Recipe
 
-* Expected Outcome: 
-* Test: 
-* Result: 
-* Verdict: 
+* Expected Outcome: A logged in user is supposed to be able to add recipes to the site. All fields except excerpt should be filled in. 
+* Test: As logged in user add a new recipe, trying to leave fields blank and filling out all. 
+* Result: When leaving one or more of the required fields blank the user is encouraged to fill out the form completely. If that requiry is met the recipe is uploaded and the user is redirected to the home page. 
+* Verdict: Code functions as intented.
 
-####
+#### Placeholder image
 
-* Expected Outcome: 
-* Test: 
-* Result: 
-* Verdict: 
+* Expected Outcome: If the user does not choose to upload an image for their recipe a placeholder image should be displayed.
+* Test: Add recipe without image. 
+* Result: When adding a recipe but not uploading an image, the placeholder image will be displayed. 
+* Verdict: Code functions as intented.
+
+### Register New Account
+
+* Expected Outcome: As a site user you should be able to create an account to be able to interact with the site. The username has to be unique and entering an email address is optional. 
+* Test: Create new account with unique username, create new account with already existing username, create new account with and without email address. 
+* Result: If the new account has a unique username the account is created, regardless whether an email address is entered or not. When trying to create a new account with an existing username, the user is encouraged to choose a unique username since it already exists. When the account is registered the user is logged in and is notified by an alert. 
+* Verdict: Code functions as intented.
+
+### Login
+
+* Expected Outcome: As a registered site user you should be able to log in to your accout to be able to interact with the site. If you wish your login credentials can also be saved on your computer ensuring you do not have to fill them each time you visit the site. 
+* Test: Check Login functionality as registered user. 
+* Result: When entering valid login credentials the user is logged in and redirected to the home page and an alert notifies the user that they are logged in. 
+* Verdict: Code functions as intented.
+
+### Logout
+
+* Expected Outcome: As a registered and logged in user you should be able to log out of the site. 
+* Test: Check Logout functionality as logged in user. 
+* Result: When clicking Logout the user is redirected to Logout page and asked to confirm that they wish to log out. When Log Out button is clicked the user is logged out and redirected to home page. 
+* Verdict: Code functions as intented.
 
 
 [Back to content](#contents)
