@@ -236,10 +236,10 @@ Testing was done manually throughout the development process. The full rundown o
     **Solution** Once again I reached out on Slack to see if any of my fellow students had any good solutions and once again I got help. It turned out that all I had to do was add SUMMERNOTE_CONFIG in my settings.py file, and from there I could add the desired width and height. 
 
 * **Known Bug** - *Error thrown due to slug issue*
-    The recipe titles need to be unique since the slug is generated from it. But, if you write for example Tomato Soup, it will be viewed as different from tomato soup - but the slug will still be the same and hence an error will be thrown. To solve this I would have to create a more sophisticated way to render unique slugs, something that I at this point feel I do not have enough time to do. I will have to leave this as a known bug for now, and come back to it in the future. 
+    The recipe titles need to be unique since the slug is generated from it. But, if you write for example Tomato Soup, it will be viewed as different from tomato soup - but the slug will still be the same and hence an error will be thrown instead of the user being forced to choose a unique title. To solve this I would have to create a more sophisticated way to render unique slugs, something that I at this point feel I do not have enough time to do. I will have to leave this as a known bug for now, and come back to it in the future. 
 
-* **Known Bug** - *Directed to homepage after editing recipe*
-    This known issue is related to the previous bug, after a user has edited their recipe they are redirected to the home page. Ultimately I would like the user to be directed back to the updated recipe, but unfortunately I have not found a way to do that without the unique slug. Also this I will have to leave for now due to limited time, but will come back to in the future. 
+* **Known Bug** - *Directed to homepage after editing recipe and deleting comment*
+    This known issue is related to the previous bug, after a user has edited their recipe or deleted a comment they are redirected to the home page. Ultimately I would like the user to be directed back to the updated recipe or view recipe detail, but unfortunately I have not found a way to do that without the unique slug. Also this I will have to leave for now due to limited time, but will come back to in the future. 
 
 [Back to content](#contents)
 

@@ -238,6 +238,8 @@
 * Result: When visiting the About page the content of the site is displayed in a neat and explanatory way. For better user experience when viewed on smaller screens the images on the page are hidden since they serve a design purpose only. 
 * Verdict: Code functions as intented.
 
+### Add Recipe
+
 #### 
 
 * Expected Outcome: 
