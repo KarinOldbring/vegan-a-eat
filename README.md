@@ -200,7 +200,8 @@ This feature is pretty simple and could in retrospect have been incorporated fro
 
 ## **Testing**
 
-Testing was done manually throughout the development process. The full rundown of the testing can be found in a separate [TESTING.md](TESTING.md) file.
+Testing was done manually throughout the development process. The full rundown of the testing can be found in a separate testing file. 
+
 [Back to content](#contents)
 
 ## **Bugs**
@@ -278,7 +279,7 @@ Testing was done manually throughout the development process. The full rundown o
      - Am I Responsive was used to see responsive design throughout the process and to generate mockup imagery to be used.
 - [Balsamiq Wireframes](https://balsamiq.com/learn/articles/what-are-wireframes/ "Link to Balsamiq Wireframes")
      - Balsamiq Wireframes was used to create the wireframes for the project.  
-- [tinypng.com](https://tinypng.com/ "Link to tinypng)
+- [tinypng.com](https://tinypng.com/ "Link to tinypng")
      - Tinypng was used to compress images. 
 
 
