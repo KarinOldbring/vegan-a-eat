@@ -210,7 +210,21 @@
 * Result: When viewing a recipe in full as logged in user the option to leave a comment in presented. When a comment is entered and the user presses the "Submit" button the comment is displayed in the comments section. If the user is not logged in there is a text stating that you need to be logged in to comment, the text presents clickable links to Login/Register. 
 * Verdict: Code functions as intented.
 
+#### Manage Recipe
+
+* Expected Outcome: When a logged in user is viewing their own recipes, an option to Edit or Delete the recipe should be presented. If the site user is not the recipe author, there should be no option to manage recipe. 
+* Test: View a recipe that I am the author of, wiew another users recipe and view a recipe as not logged in user. 
+* Result: When viewing my own recipe an option to Edit or Delete recipe is clearly presented. When viewing a recipe that I am not the user of, or when not not logged, there is no option to manage recipe. 
+* Verdict: Code functions as intented.
+
 #### Edit Recipe
+
+* Expected Outcome: When wieving your own recipes you are supposed to be presented with the option to Edit your recipe. When this button is clicked an Edit Recipe view is opened and all features of the recipe can be edited. 
+* Test: View my own recipe, click Edit button and edit the recipe. 
+* Result: The Edit Recipe view opens when the button is clicked and all features of the recipe can be edited. After the recipe has been edited and the Submit button is clicked, the recipe is updated and the user is redirected to the home page. 
+* Verdict: The code function to Edit recipe works as intented, although also here there is an issue with the unique slug as presented in the Bugs section in the Readme.md. In a future version of the site the user would have been taken back to the recipe detail instead of being redirected to the home page for better user experience. 
+
+#### Delete Recipe
 
 * Expected Outcome: 
 * Test: 
