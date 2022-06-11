@@ -169,13 +169,32 @@
 * Result: The seventh recipe that was added to the site was displayed on a second page, visible if the next button was clicked. 
 * Verdict: Code functions as intented.
 
+### View Recipe
+
+#### Recipe Detail
+
+* Expected Outcome: When a specifik recipe is clicked the recipe should open on a recipe detail page. On this page you can see an image, title, excerpt (if available), author, updated on, ingredients, instructions and created on. 
+* Test: Click a recipe to check that it opens up and reveals all information. 
+* Result: When a recipe is clicked it opens up and reveals information, but not the cooking time. 
+* Verdict: Code functions as intended but the cooking time is missing in the template. 
+* Solution: Add cooking time to recipe detail template. 
+* Test 2: Click a recipe to check that it opens up and reveals all information, including cooking time. 
+* Result 2: When a recipe is clicked it opens up and reveals all available information, including cooking time. 
+* Verdict: Code now functions as intented.
+
 #### 
 
 * Expected Outcome: 
 * Test: 
 * Result: 
-* Verdict: 
+* Verdict:
 
+#### 
+
+* Expected Outcome: 
+* Test: 
+* Result: 
+* Verdict:
 [Back to content](#contents)
 
 ## Automated Testing
