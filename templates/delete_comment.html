@@ -2,6 +2,8 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
+{% block content %}
+
 <div class="container">
     {% if request.user == comment.author %}
     <div class="row mt-5">
@@ -13,12 +15,12 @@
         <div class="col-md-5 col-sm-12">
             <h5>Are You Sure?</h5>
             <p>You are about to delete this comment, this cannot be undone.</p>
-        <form method="POST">
-            {% csrf_token %}
-            <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-danger">Delete</button>
-            </div>
-        </form>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </form>
         </div>
     </div>
     {% else %}
@@ -28,3 +30,5 @@
     </div>
     {% endif %}
 </div>
+
+{% endblock %}
