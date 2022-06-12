@@ -317,4 +317,6 @@ The site has been tested using the following browsers:
 
 ## User Testing
 
+The site has been tested regularly during development. After the site was completed the site has been tested by several users to make sure functionality and good user experience. 
+
 [Back to content](#contents)
