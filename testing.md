@@ -301,6 +301,18 @@ The Summernote feature implemented in the forms threw up a large number of error
 
 * Python Validation - all pages clear
 
+Files tested: 
+*Blog*
+* admin.py
+* apps.py
+* forms.py
+* models.py
+* urls.py
+* views.py
+*Vegan-a-eat*
+* setting.py
+* urls.py
+
  I found errors when validating the python files. This was found in the settings.py file where certain urls went beyond the character limit on a single line. This error can be ignored as there is no way to reduce the url length to conform to the character limit per line.
 
 ### Browser Validation

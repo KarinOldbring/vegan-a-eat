@@ -1,9 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
-from cloudinary.models import CloudinaryField
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django_summernote.fields import SummernoteTextField
 from django.template.defaultfilters import slugify
+from cloudinary.models import CloudinaryField
 
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
@@ -34,9 +34,9 @@ class Recipe(models.Model):
 
     class Meta:
         """
-        Order the recipes in descending order
+        Order the recipes in ascending order
         """
-        ordering = ['-created_on']
+        ordering = ['created_on']
 
     def __str__(self):
         """
