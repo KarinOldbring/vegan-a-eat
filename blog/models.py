@@ -34,9 +34,9 @@ class Recipe(models.Model):
 
     class Meta:
         """
-        Order the recipes in ascending order
+        Order the recipes in descending order
         """
-        ordering = ['created_on']
+        ordering = ['-created_on']
 
     def __str__(self):
         """
@@ -71,7 +71,7 @@ class Meta:
     """
     Orders the comments in ascending order
     """
-    ordering = ['created_on']
+    ordering = ['-created_on']
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
