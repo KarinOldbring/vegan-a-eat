@@ -338,6 +338,17 @@ To deploy this page to Heroku from its GitHub repository, the following steps we
 
 * Images used on the site are mainly from Instagram account [@nutritious.health.se](https://www.instagram.com/nutritious.health.se/), who my sister is the owner of and all images are used with her consent. Home page image is from [Pexels](https://www.pexels.com/sv-se/)
 
+### Code
+
+References used:
+
+* [Bootstrap](https://getbootstrap.com/)
+* [Django Docs](https://docs.djangoproject.com/en/4.0/)
+* [Stack Overflow](https://stackoverflow.com/)
+* [Summernote Github Docs](https://github.com/summernote)
+* [w3 Schools](https://www.w3schools.com/)
+* [Crispy Forms Docs](https://django-crispy-forms.readthedocs.io/en/latest/)
+
 ### Acknowledgements
 
 * I would like to thank my sister for giving me inspiration for this site, recipes and beautiful images. 
