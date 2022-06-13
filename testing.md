@@ -329,6 +329,6 @@ The site has been tested using the following browsers:
 
 ## User Testing
 
-The site has been tested regularly during development. After the site was completed the site has been tested by several users to make sure functionality and good user experience. 
+The site has been tested regularly during development. After the site was completed the site has been tested by several users to make sure functionality and good user experience is maintained. I have also reached out to my wonderful fellow students on Slack to ask for feedback. Their helpful advice led me to some improvements in order to create a better user experience and overall functionality. 
 
 [Back to content](#contents)

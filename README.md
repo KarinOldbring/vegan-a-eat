@@ -281,6 +281,8 @@ Testing was done manually throughout the development process. The full rundown o
      - Balsamiq Wireframes was used to create the wireframes for the project.  
 - [tinypng.com](https://tinypng.com/ "Link to tinypng")
      - Tinypng was used to compress images. 
+- [Emojipedia](https://emojipedia.org/ "Link to Emojipedia")
+     - Emojipedia was used for heart and copyright emojis. 
 
 
 [Back to content](#contents)
