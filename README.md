@@ -332,4 +332,14 @@ To deploy this page to Heroku from its GitHub repository, the following steps we
 
 ## **Credits**
 
+### Media
+
+* Images used on the site are mainly from Instagram account [@nutritious.health.se](https://www.instagram.com/nutritious.health.se/), who my sister is the owner of and all images are used with her consent. Home page image is from [Pexels](https://www.pexels.com/sv-se/)
+
+### Acknowledgements
+
+* I would like to thank my sister for giving me inspiration for this site, recipes and beautiful images. 
+
+* All the wonderful people on Slack who always come to the rescue providing hands on coding support or invaluable emotional support! 
+
 [Back to content](#contents)
