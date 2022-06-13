@@ -10,7 +10,7 @@ from .models import Recipe, Comment
 from . import forms
 from .forms import RecipeForm
 from .forms import CommentForm
-
+    
 
 @login_required
 def add_recipe(request):
