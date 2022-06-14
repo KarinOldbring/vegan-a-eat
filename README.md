@@ -202,7 +202,7 @@ This feature is pretty simple and could in retrospect have been incorporated fro
 
 ## **Testing**
 
-Testing was done manually throughout the development process. The full rundown of the testing can be found in a separate testing file. 
+Testing was done manually throughout the development process. The full rundown of the testing can be found in a separate [testing.md file](testing.md). 
 
 [Back to content](#contents)
 
